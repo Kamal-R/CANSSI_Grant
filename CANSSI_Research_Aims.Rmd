@@ -1,8 +1,5 @@
 ---
 title: ""
-output:
-  pdf_document:
-    latex_engine: xelatex
 biblatex: 1
 biblio-style: authoryear,backend=biber
 biblatexoptions: 
@@ -17,39 +14,38 @@ fontsize: 12pt
 documentclass: article
 classoption: letterpaper
 link-citations: true
-csl: journal-of-the-royal-statistical-society.csl
 font: "Times New Roman"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-**Research Aims**
 
-<!-- Limit to 5 pages, including references (include all details). Will be expanded to 7 pages in the full proposal -->
+# Research Aims
 
-**Overview**
+<!-- 7 pages in the full proposal -->
+
+## Overview
 
 There is growing interest in developing a simple, intuitive air quality index that simultaneously accounts for the health effects of multiple air pollutants [@dominici2010protecting; @stieb2008new; @bopp2018something]. Health effects of air pollution depend on the composition of pollutants in the air, not simply the levels of a single pollutant [@dominici2010protecting]. An air quality index that reflects this understanding should account for the levels and relative contributions of each air pollutant in the ambient air. In this proposal, we will improve statistical methods for conducting inference on the health effects of simultaneous exposure to multiple environmental pollutants, with a focus on quantifying short-term effects of poor air quality on health outcomes at the population level.
 
-The *constrained groupwise additive index model* (cGAIM) is introduced by @pierre2020aim, who employs frequentist inference methods that use sequential quadratic programming. For a response distribution $D$, parameter $\theta = (\theta_{1}, \ldots, \theta_{d})$, link function $g$, and constraints as below, the cGAIM is,
-
-\vspace{-0.75em}
+The *constrained groupwise additive index model* (cGAIM), introduced by @xia2006cumulative, is a vehicle for providing a multi-pollutant health index. Writing $\lambda_{it}$ for the risk of a particular outcome for an individual $i$ on day $t$,  the cGAIM is
 $$
-\begin{aligned}
-  Y_{t} | \lambda_{t} & \stackrel{i.i.d.}{\sim}  D( \lambda_{t}, \tau ), \\
-  g( \lambda_{t} ) &= X^{T}\beta + s(\alpha^{T} Z_t ) + f_{1}( W_{1t} ) + \ldots + f_{K}( W_{Kt} ).
-\end{aligned}
+  \lambda_{it} = \exp\left[ X_{it}^{T}\beta + s(\alpha^{T} Z_{it} ) + f_{1}( W_{1it} ) + \ldots + f_{K}( W_{Kit} ) \right].
 $$
-Here $Y_{t}$ is the outcome of interest, $\beta$ are the fixed effects of the potentially time-varying linear covariates $X$, and $f_{1}, \ldots, f_{K}$ are smoothing functions that account for potential confounding variables $W_{k,t}$ ($k = 1,\ldots,K$). The distinguishing feature of cGAIM is $s$, a smooth function fit to a linear combination of covariates $Z_t$. $\alpha$ is a vector of weights on the entries of $Z_t$, and gives the relative contribution the components of $Z_t$. The smooth function $s$ is specified as a member of a flexible parametric family of functions, such as cubic splines or random walks. Estimating $\alpha$ is the main statistical challenge with the cGAIM. We will develop a Bayesian methodology for inference with the cGAIM -- the bcGAIM. 
+The $\beta$ parameters are the fixed effects of the potentially time-varying linear covariates $X_{it}$, and $f_{1}, \ldots, f_{K}$ are smooth functions that account for potential confounding variables $W_{kit}$ ($k = 1 \ldots K$). The distinguishing feature of cGAIM is the smooth function $s$ whose argument is a linear combination of covariates $Z_t$, which might be PM 2.5 and Ozone. The $\alpha$ parameter is a vector of weights on the entries of $Z_t$, and gives their relative contributions.   The smooth functions $s$ and the $f_k$ might be composed of spline functions or Gaussian processes such as random walks.  
 
-The bcGAIM provides two main statistical benefits compared to the cGAIM. The first is quantification of the uncertainty for $\alpha$; the cGAIM does not provide confidence intervals for $\alpha$. Consider the multi-pollutant model, where $Z_{t}$ is a matrix of daily pollutant levels. Pollutants tend to be positively correlated, and it is possible that the posterior of $\alpha$ is multi-modal. If this holds, multiple different values of $\alpha$ will be equally predictive of health outcomes. It is also possible that $\alpha$ is not multi-modal and the importance of each pollutant can be estimated with some certainty. Either result would be a significant contribution research on the health effects of multiple pollutant. The second advantage is that the bcGAIM will be able to accommodate high-dimensional $\alpha$, allowing the multi-pollutant model to be extended to $Z_t$ that contain pollution levels at different time lags. The joint posterior distribution of this high-dimensional $\alpha$ will provide information on how quickly poor air quality affects different mortality and morbidity outcomes. For example, it could show if different combinations of lagged pollutants are equally predictive for the outcome of interest, or if they are not.
-
-We will also develop methods for fitting a case crossover models using the bcGAIM, which offers advantages over the log-linear Poisson model. The case crossover has seen increased attention in the air pollution literature [@wei2019short; @stringer2020approximate]. It can be viewed as a proportional hazards survival model, where each individual is in a separate strata and 'control days' are chosen to have the same baseline hazard as the event day.  Additional details are given in the Methods section. Finally, note that the bcGAIM has many applications beyond building an air quality index, some of which are detailed below.
+While cGaim has until now been used with daily case counts as the response variable, we will employ case crossover models, which have seen increased attention in the air pollution literature [@wei2019short; @stringer2020approximate].  These models define one or more *control days* for each case, for example the same day of the week on the previous two weeks, and use a partial likelihood for the probability the event occurs on the case day rather than the control days.  The advantage of case crossover models is any risk factors which vary slowly or not at all, or are the same on the case and control days, are automatically adjusted for.  The challenge introduced by case crossover models is the likelihood depends on non-linear combinations of the latent variables. 
 
 
-**Objectives**
+Estimating $\alpha$ is the main statistical challenge with the cGAIM, which @pierre2020aim 
+accomplish with frequentist inference methods that use sequential quadratic programming.  We will develop a Bayesian methodology for inference with the cGAIM --- the bcGAIM --- which will fully quantify the uncertainty around $\alpha$ and propogate the uncertainty into inference on $s$.  While there is consistent evidence that air pollution increases daily incidence of adverse health outcomes, we expect that information contained in data on the effects of specific combinations of pollutants at different lags is weak.  The bcGAIM will identify both what we can and cannot infer from historical health and pollution data, a feature which will become increasingly important as the dimensionality of $\alpha$ and $Z_{it}$ increase.
+
+
+## Outcomes and applications
+
+This project brings together the methodological components of several interdisciplinary and collaborative research activities which the four investigators have been engaging in independently of each other.  
+
+The primary driver of this research is the need for an improved air quality warning system, which Health Canada and the Institut national de santé publique du Québec have (separately) approached Drs Brown and Chebana (respecctively) about.
+
 
 This proposal has three main research objectives. The first is to develop an air quality index for Canadian cities that accounts for the combined effects of multiple air pollutants. This index will be developed in collaboration with Health Canada and INSQ with the intention of being used in a public warning system. The second is to investigate how exposure to different mixtures of pollutants affects daily COVID-19 mortality. The third is to undertake epidemiological studies involving exposures to environmental pollutants in areas where the Centre for Global Health Research or other project collaborators have suitable data (Canada, India, and the United States). 
 
