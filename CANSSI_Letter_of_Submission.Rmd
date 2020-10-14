@@ -1,6 +1,7 @@
 ---
 title: "CANSSI - Letter of Submission"
 output: pdf_document
+biblatex: 1
 bibliography: bibliography.bib
 geometry: margin=1in
 size: 12pt

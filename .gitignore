@@ -1,0 +1,13 @@
+
+CANSSI_Letter_of_Submission.pdf
+*.blg
+*.log
+*.pdf
+*.xml
+*.tex
+*.pdf
+CANSSI_Research_Aims.pdf
+CANSSI_Letter_of_Submission.pdf
+*.aux
+*.bbl
+*.bcf
