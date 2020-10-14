@@ -1,0 +1,402 @@
+---
+title: ""
+output:
+  pdf_document:
+    latex_engine: xelatex
+header-includes:  
+    - \usepackage{geometry} 
+    - \usepackage{array, makecell}
+biblatex: 1
+biblio-style: authoryear,backend=biber
+biblatexoptions: 
+  - maxbibnames = 20
+  - maxcitenames = 2
+  - doi = false
+  - isbn = false
+  - giveninits = true
+  - uniquelist = false
+bibliography: "bibliography.bib"
+geometry: margin=1in 
+fontsize: 12pt
+documentclass: article
+classoption: letterpaper
+link-citations: true
+csl: journal-of-the-royal-statistical-society.csl
+font: "Times New Roman"
+---
+
+\vspace{-2em}
+
+**Letter of Submission**
+
+**THIS NEEDS TO BE UPDATED -- SEE THE DOCUMENT ON GITHUB**
+
+
+\clearpage
+
+**Title of the Project**: Statistical Methods for Daily Mortality and Multiple Environmental Risk Factors
+
+**Name and affiliations of lead investigators**
+
+- Patrick E. Brown
+    - Centre for Global Health Research, St. Michael's Hospital
+    - Department of Statistical Sciences, University of Toronto
+- Fateh Chebana 
+    - Centre Eau Terre Environnement, Institut national de la recherche scientifique, Québec.
+- Cindy Feng 
+    - School of Epidemiology and Public Health, University of Ottawa
+- Meredith Franklin 
+    - Keck School of Medicine, University of Southern California (until July 2021) 
+    - School for the Environment and Department of Statistical Sciences, University of Toronto (from July 2021)
+
+
+**List of proposed collaborators, titles, and affiliations**
+
+Name: Kamal Rai <br/>  
+Title: PhD student<br/>  
+Affiliations: Centre for Global Health Research, St. Michael's Hospital <br/>  
+              \hspace*{61.5pt} Department of Statistical Sciences, University of Toronto
+
+
+Name: Daniel Rainham <br/>   
+Title: Professor <br/>    
+Affiliations: School of Health and Human Performance, Dalhousie University <br/>    
+              \hspace*{61.5pt} Healthy Populations Institute, Dalhousie University 
+
+Name: Hwashin Shin <br/>  
+Title: Scientist <br/>  
+Affiliation: Environmental Health Science and Research Bureau, Health Canada <br/>  
+
+
+Name: Céline Campagna <br/>  
+Title: Responsable scientifique <br/>  
+Affiliation: Équipe Changements climatiques et santé, Institut National de Santé Publique du Québec
+
+
+Name: Pierre Masselot <br/>  
+Title: Research Fellow <br/>    
+Affiliation: London School of Hygiene & Tropical Medicine, United Kingdom
+
+
+   
+
+**List of potential partner organizations**
+
+- The **Centre for Global Health Research, St. Michael's Hospital** will lead the health sciences research component of the project, providing data from the US and India and time of research staff to work on manuscripts. The Toronto-based component of the team will be located at the Centre for Global Health Research (CGHR) and will be integrated into the Geospatial Mortality research group Dr. Brown leads. A portion of the Toronto PhD student's salary will be funded though a CGHR research grant.
+
+- **L'Institut National de Santé Publique du Québec** has the mandate to analyse, monitor and evaluate determinants of health, including environmental pollutants, and will give access to the Quebec provincial health databases. In-kind support will also include health expertise for the statistical design and interpretation of research, including co-supervision of students.
+
+- Hwashin Shin at **Health Canada** is central to this project. Her needs for an improved air quality indicator instigated the discussions which lead to this application. Dr. Shin has been funding Dr. Brown's team through Health Canada research contracts, and intends to provide at least $15,000 per year to the project.
+
+
+\clearpage
+**Research Aims**
+
+**THIS NEEDS TO BE UPDATED -- SEE THE DOCUMENT ON GITHUB**
+
+
+\clearpage
+**Anticipated roles of trainees (students and post-doctoral fellows)**
+
+<!-- Describe roles of undergraduate and graduate students and postdoctoral fellows in the project. Indicate the proposed home institution of the various personnel, how they will be mentored and included in the project, and how they would contribute to the cohesion of the team (e.g. through joint supervision arrangements). Limit to one page. --> 
+
+**THIS NEEEDS TO BE UPDATED TO MATCH THE RESPONSE TO THE SAC's QUESTIONS**
+
+Kamal Rai will complete his PhD in 2021 and will work on this project as a postdoc.  He will develop the Bayesian implementation of the GAIM models in Stan. This includes exploring determining appropriate prior distributions for the weights $\alpha$, developing visualizations that communicate modeling results, and assisting other project members in developing shape constraints. He will be responsible for producing paper(s) summarizing the results of this model when run on Canadian air pollution and mortality data. To facilitate team communication and cohesion, he will also split time between Toronto (at the Centre for Global Health Research) and Ottawa (at the University of Ottawa), and use the proximity of the University of Ottawa to Quebec to occasionally visit project collaborators located there.
+
+The University of Toronto PhD student will develop the INLA-like Bayesian computations to conduct inference on the GAIM, and compare its results from those obtained from the Stan implementation. A University of Laval or University of Ottawa PhD student will develop methods to conduct shape-constrained (Bayesian) inference, and examine the relationship between COVID-19 deaths and air pollution levels. 
+
+
+**Equity, Diversity, Inclusion**
+
+<!-- Explain how the project addresses the EDI priorities of NSERC and CANSSI (http://www.canssi.ca/home/a-note-on-diversity). Limit to half a page. --> 
+
+**THIS NEEDS TO BE COMPLETED**
+
+**Anticipated organization of collaboration**
+
+<!-- Describe plans for supporting collaboration, e.g. indicating how members of the team would communicate, group meetings, exchanges of students and postdoctoral fellows, dealing with disciplinary and geographic hurdles to the collaboration. Limit to one page. --> 
+
+**THIS NEEEDS TO BE UPDATED TO MATCH THE RESPONSE TO THE SAC's QUESTIONS**
+
+The research team is situated in three cities - Toronto, Quebec, and Halifax. Two investigators, Patrick Brown and Meredith Franklin, will be in Toronto at the University of Toronto. One investigator and one collaborator, Cindy Feng and Daniel Rainham, will be in Halifax at Dalhousie University. Finally, one investigator, Fateh Chebana, will be in Quebec at INRS.
+
+
+**Plans for dissemination and communication**
+
+<!-- Describe plans for dissemination and communication, e.g., organization of specialized professional meetings, organized presentations at large professional meetings, preparation of short courses, surveys, and notes, software, publicly accessible publications, and so on, expanding on the description in the Letter of Intent. Limit to half a page. -->
+
+**THIS NEEDS TO BE UPDATED**
+
+The lead investigators of this proposal have a track record of publishing research results in leading statistical and epidemiological journals, and aim to publish the results of this project in high-impact journals. The results and findings of this multiple pollutant inquiry will also be shared with Health Canada and the Institut National de Santé Publique du Québec.   Drs Shin and Campagna will use the methodologies developed in their ongoing research and programatic work, and facilitate the adoption of the methods more widely in their organizations.
+
+
+**Schedule of events** 
+
+<!-- Provide a three-year calendar or schedule of major collaborative activities, dissemination and publication activities, and any project milestones. --> 
+
+**THIS NEEDS TO BE UPDATED**
+
+\underline{Project Milestones}
+
+Task: Develop the bcGAIM 
+
+\begin{itemize}
+    \item 6-8 months: Implement prior(s) for shape-constrained inference for 1$^{\text{st}}$-order and 2$^{\text{nd}}$-order random walks. 
+    \item 8-12 months: Implement the bcGAIM in Stan and apply to the multi-pollutant problem. 
+    \item 12-16 months: Iterate development of priors until modeling results are satisfactory for the multi=pollutant model.
+    \item 16-20 months: Write a paper summarizing these modeling results and submit for publication. 
+    \item 16-20 months: Release an R package so that these models are readily available.
+    \item 20-24 months: Implement additional prior(s) for shape-constrained Bayesian inference.
+    \item 24-30 months: Extend to a hierarchical model. 
+    \item 30-36 months: Write a paper summarizing the results of the hierarhical extensions for the exact and approximate inference models, and submit for publication. 
+
+\end{itemize}
+
+Task: Approximate Inference Algorithm
+\begin{itemize}
+    \item 4-6 months: Implement Laplace approximations for $\pi( \eta | \theta, \alpha, Y )$ and $\pi( \theta | Y )$ in Stan. 
+    \item 4-8 months: Implement an approximate inference algorithm for $\pi( \alpha | \theta,Y )$ in Stan. 
+    \item 8-12 months: Implement both approximations outside of Stan. Compare estimation results to those achieved in Stan.
+    \item 12-16 months: Iterate development of approximation schemes outside of Stan.
+    \item 16-20 months: Write a paper summarizing these results and submit for publication. 
+    \item 20-24 months: Apply both approximations to the multi-pollutant model.
+    \item 20-24 months: Add the approximate Bayesian inference models to the R package. 
+    \item 24-30 months: Extend the approximation algorithm to hierarchical models. Compare to results obtained by Stan.
+    \item 30-36 months: Add hierarchical approximate inference model to the R package. 
+\end{itemize}
+
+
+Task: Multi-Pollutant Application
+
+Note: The Stan implementation of the bcGAIM and the approximate inference algorithms will be developed against the multi-pollutant model, so the tasks for this application are mostly listed above. We include it on its own to give a specific breakdown of the development of the mulit-pollutant model.
+
+\begin{itemize}
+    \item 8-12 months: Explore the performance of bcGAIM across regions and mortality outcomes.
+    \item 12-16 months: Iteratively refine the bcGAIM (including the shape-constraining priors).
+    \item 24-30 months: Extend the multi-pollutant model to a hierarchical model (exact and approximate versions).
+    \item 30-36 months: Write a paper summarizing these results and submit for publication. 
+    \item 30-36 months: Add hierarhical bcGAIM model to the R package.
+\end{itemize}
+
+
+Task: COVID-19 Application 
+\begin{itemize}
+    \item 12-14 months: Identify COVID-19 confounders and data sets that may be used to fit a COVID-19 bcGAIM model. 
+    \item 14-16 months: Fit the bcGAIM model to COVID-19 mortality data. 
+    \item 16-20 months: Write a paper summarizing these results and submit for publication. 
+\end{itemize}
+
+
+Task: Collaborative Applications
+\begin{itemize}
+    \item 12-36 months: Once the bcGAIM is implemented, work with collaborations on appropriate epidemological studies.
+\end{itemize}
+
+
+**Dissemination and Publication Activities**
+
+**THIS NEEDS TO BE UPDATED**
+
+Year 1 
+
+\begin{itemize}
+  \item Milestone: Implement the bcGAIM with shape-constrained priors that are applicable for the multi-pollutant problem. 
+  \item Milestone: Implement the INLA-like approximation to the target density of this model in Stan.
+\end{itemize}
+
+Year 2 
+
+\begin{itemize}
+    \item Milestone: 
+    \item Milestone: 
+    \item Submit paper: A multi-pollutant air quality index. 
+    \item Submit Paper: Approximate Bayesian inference for the bcGAIM model
+    \item Dissemination: Discuss shape-constrained Bayesian inference at 1-2 conferences.
+    \item Dissemination: Discuss approximate Bayesian inference at 1-2 conferences. 
+\end{itemize}
+
+Year 3 
+
+\begin{itemize}
+    \item Milestone: 
+    \item Submit Paper: Shape-constrained Bayesian inference with interpretable priors.
+    \item Submit paper: The effects of multiple pollutant mixtures on COVID-19 mortality.
+    \item Submit paper: A hierarchical extension to Approximate Bayesian inference
+    \item Dissemintation: Discuss the multi-pollutant air quality index at 1-2 conferences.
+    \item Dissemintation: Discuss hierarchical extensions to the multi-pollutant air quality index at 1-2 conferences.
+    \item Dissemintation: Discuss the COVID-19 inquiry into air pollution exposure at 1-2 conferences.
+\end{itemize}
+
+
+\clearpage
+
+**Major Collaborative Activities**
+
+**THIS NEEDS TO BE UPDATED**
+
+The different components of the bcGAIM project are naturally related. The bcGAIM is being developed in Stan in the first year, as is the first version of the approximate inference algorithm. Therefore, the bcGAIM model should be written to faciliate incorporating these approximations, and they should be developed knowing they will be implemented in Stan. In the second year, the two Stan models and the approximate inference algorithm will be extended to a hierarchical formulation. Although the hierarchical structure is at the city-level, nearby cities differ in their distance from each other. Ideally, a hierarchical model should account for how the composition of a mixture of pollutants varies by distance. The numerical difficulties and more complicated hierarchical structure should encourage strong collaboration at this stage of the project. The third year is devoted to applications -- applying the fully developed bcGAIM model to the multi-pollutant problem, COVID-19 data, and other epiodemiological applications that arise during the course of the project -- as well as writing papers and producing a useful R package. There is again natural collaboration between those writing and maintaining the R package. 
+
+
+
+**Three-year budget**
+
+**THIS NEEDS MILD UPDATES - I CAN DO THESE**
+
+<!-- Provide a tentative three-year budget table showing the expenditures in each of the three years for undergraduate and graduate student funding, postdoctoral fellow funding, student travel, visitor travel, and costs associated with dissemination and publication of results. For each item, indicate the funding from CANSSI and the funding from other sources if applicable. If relevant, identify other sources of funding in footnotes below the table. CANSSI funding can be used only for NSERC eligible expenses. For the competition in 2020, the CANSSI funding over the three years should sum to $200,000. --> 
+
+The table below lists income and expenses for each of the three years of the project. This budget assumes that CANSSI funding over the 3 year period is \$200,000. 
+
+```{r CANSSI-Budget-Yearly-Breakdown, echo = FALSE}
+library(magrittr) 
+Expenses <- t( data.frame( "\\makecell[l]{Postdotor-\\\\al Fellow}", 
+                           "\\makecell[l]{Graduate \\\\ Students}",
+                           "\\makecell[l]{Graduate \\\\ Students}",
+                           "\\makecell[l]{Undergrad \\\\ Students}",
+                           "\\makecell[l]{Undergrad \\\\ Students}",
+                           "\\makecell[l]{Research \\\\ Assistant}",
+                           "\\makecell[l]{INSPQ \\\\ Staff Time}",
+                           "Travel",
+                           "\\textbf{Total}" ) )
+
+Contributions_1_Names_Non_CANSSI <- t( data.frame( "HC",
+                                        "INRS", 
+                                        "NSERC", 
+                                        "USRA",
+                                        "DG",
+                                        "CGHR",
+                                        "INSPQ",
+                                        " ",
+                                        "  ") )
+
+Contributions_1_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$7}",
+                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
+
+Contributions_2_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$7}",
+                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
+
+Contributions_3_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$9}",
+                                         "\\makecell[c]{\\textbf{\\$68}}" ) )
+
+Contributions_1_Non_CANSSI <- t( data.frame( "HC: \\space \\space \\space \\space \\space \\$20",
+                                         "INRS: \\space \\space \\$10",
+                                         "NSERC: \\$7",
+                                         "USRA:  \\space  \\space \\$9",
+                                         "DG:  \\space  \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR: \\$10",
+                                         "INSPQ: \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+Contributions_1_Non_CANSSI[1] <- paste0("HC\\textbf{", kableExtra::footnote_marker_number(1), "}",
+                                        " \\space \\space \\space \\space \\space \\space \\$20")                               
+Contributions_1_Non_CANSSI[2] <- paste0("INRS\\textbf{", kableExtra::footnote_marker_number(2), "}",
+                                        " \\space \\space \\space \\$20")                                     
+Contributions_1_Non_CANSSI[3] <- paste0("NSERC\\textbf{", kableExtra::footnote_marker_number(3), "}", 
+                                        " \\space \\$7" )
+Contributions_1_Non_CANSSI[4] <- paste0("USRA\\textbf{", kableExtra::footnote_marker_number(4), "}", 
+                                        " \\thinspace \\thinspace \\space \\space \\$9" )
+Contributions_1_Non_CANSSI[5] <- paste0("DG\\textbf{", kableExtra::footnote_marker_number(5), "}",
+                                        " \\thinspace \\space \\space \\space \\space \\space  \\space \\$3")
+Contributions_1_Non_CANSSI[6] <- paste0("CGHR\\textbf{", kableExtra::footnote_marker_number(6), "}", 
+                                        " \\thinspace \\thinspace \\$10")
+Contributions_1_Non_CANSSI[7] <- paste0("INSPQ\\textbf{", kableExtra::footnote_marker_number(7), "}", 
+                                        " \\thinspace \\thinspace \\$10")
+
+Contributions_2_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
+                                         "INRS \\space \\space \\space \\space \\space \\$10",
+                                         "NSERC \\space \\space \\space \\$7",
+                                         "USRA \\space \\space \\space \\space \\space \\$9",
+                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR \\space \\space \\space \\$10",
+                                         "INSPQ \\space \\space \\space \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+Contributions_3_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
+                                         "INRS \\space \\space \\space \\space \\space \\$10",
+                                         "NSERC \\space \\space \\space \\$7",
+                                         "USRA \\space \\space \\space \\space \\space \\$9",
+                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR \\space \\space \\space \\$10",
+                                         "INSPQ \\space \\space \\space \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+
+Budget_Table <- cbind( Expenses, Contributions_1_CANSSI, 
+                                 Contributions_1_Non_CANSSI, 
+                                 Contributions_2_CANSSI, 
+                                 Contributions_2_Non_CANSSI,
+                                 Contributions_3_CANSSI, 
+                                 Contributions_3_Non_CANSSI )
+colnames(Budget_Table) = c( "", "CANSSI", "Non-CANSII", 
+                                "CANSSI", "Non-CANSSI", 
+                                "CANSSI", "Non-CANSSI" )
+rownames(Budget_Table) = NULL 
+
+knitr::kable( Budget_Table, booktabs = TRUE, escape = FALSE,
+              format = "latex",  label = "Budget-Table" ) %>%
+kableExtra::row_spec(0, align = "l") %>%
+kableExtra::column_spec( c(1,3,5,7), border_right = TRUE) %>%
+kableExtra::column_spec( c(1,2), border_left = TRUE) %>%
+kableExtra::collapse_rows(columns = c(1,2,4,6)) %>%
+kableExtra::add_header_above( c(" " = 1, "Year 1" = 2, "Year 2" = 2, "Year 3" = 2) ) %>%
+kableExtra::add_header_above( c("Expenses" = 1, "Contributions (in 1,000's)" = 6) ) %>%
+kableExtra::footnote(number = c( "HC: Health Canada", "INRS: Institut national de la recherche scientifique", "NSERC: The Natural Sciences and Engineering Research Council of Canada", "USRA: NSERC Undergraduate Student Research Award", "DG: NSERC Discovery Grant", "CHGR: Centre for Global Health Research", "INSPQ: Institut national de santé publique du Québec (Quebec Public Health Institute)" ))
+```
+
+\underline{Annual Expenses}
+
+\begin{enumerate}
+    \item Postdoctoral Fellow: The postdoctoral fellow will be funded from the CANSSI CRT grant and Health Canada. He will help organize team meetings, split time between Toronto and Halifax, and help onboard other students as they join the project. 
+    
+    \item Graduate Students: 1 PhD student and 1 Master's student will be involved in this project. One of the graduate students will be based at INRS, the other will be at the University of Toronto or Dalhousie University.  
+
+    \item URSA Students: This project will have a number of self-contained projects suitable for undergraduate research assistants. We intend to involve 2 URSAs at \$6,000/year each, whose work will directly contribute to the project's research aims.
+    
+    \item Research Assistant: Hana Fu at CGHR will contribute roughly 3 days/month to the project. She will help maintain project data files and perform preliminary analysis. 
+    
+    \item INSPQ Staff Time: Céline Campagna at INSPQ will devote 0.5 days/week to the project. 
+    
+    \item Travel/Equipment: The travel expenses will cover attending conferences and travel between the three institutions by the project trainees. The equipment spending is intended to cover new computing equipment or cloud computing costs. 
+\end{enumerate}
+
+\underline{Contributions}
+
+\begin{enumerate}
+    \item CANSSI: The CANSSI funding is \$200,000 over three years, or \$66,666 per year. 
+    
+    \item Health Canada: Health Canada will contribute \$20,000 per year via research contracts. 
+    
+    \item INRS: Fateh Chebana will contribute \$10,000 in graduate student funding.
+    
+    \item NSERC: Cindy Feng will contribute \$7,000/year in graduate student funding. 
+    
+    \item INSPQ: The INSPQ will contribute staff time to the project, estimated at \$10,000/year for 3 years.
+    
+    \item CGHR: CGHR's support will be in-kind, in the form of funding the research assistant and providing research facilities.
+    
+    \item Undergraduate Summer Students: Two USRAs will be applied for each year, which will pay for undergraduate summer students. NSERC also requires a contribution from the Discovery Grant of the supervisor. 
+\end{enumerate}
