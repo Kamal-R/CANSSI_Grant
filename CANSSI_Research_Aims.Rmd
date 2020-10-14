@@ -61,18 +61,17 @@ The bcGAIM will make four methodological advancements for modeling  health effec
 1. develop non-parametric forms of the dose-response effect which encourage or enforce monotonicity; and
 1. engage in interdisciplinary and applied research projects with our subject-area collaborators.
 
-### bcGAIM
+### Model
+
+A simple two-pollutant version of bcGAIM has been implemented by Dr. Brown's group (under contract from Health Canada) in the MCMC software Stan [@carpenter2017stan] with a Poisson response variable.  This will be extended to having an $\alpha$ which is 12- or 15-dimensional, with three pollutants (O~3~, PM~2.5~, and NO~2~) at time lags of up to five days.  Converting the Poisson likelihood to case-crossover, moving to a highly-parallelized cloud platform, and increasing the dimensionality will require only modest amount of additional coding, although the algorithm is unlikely to function properly without a substantial amount of modification and optimization.  This is because we expect that $\alpha$ will not always be well identified, and the results will be sensitive to parametrizations and prior distributions. 
+
+The major task in this component of the research will be to find reparametrizations and multivariable prior distributions that enable prior elicitation from subject-area specialists.  We will adopt the penalized complexity prior framework of @simpson2017penalising, specifying a base model with some suitably chosen values $\alpha_0$ and deriving a prior for $\alpha$ which corresponds to an exponential prior on the KL distance between $s(\alpha Z)$ and $s(\alpha_0 Z)$.  Expert advice will be used to set $\alpha_0$ and the rate of the exponential prior.  One possible scenario would be to have $\alpha_0$ with an entry of $1$ for PM~2.5~ at lag 1 and zero otherwise, and an extremely strong exponential prior on the KL distance.  This prior would encourage a conventional single-pollutant single-lag model, other pollutants would be inferred to have negligible effect on health outcomes unless the data provided considerable information to the contrary.  A weaker prior with $\alpha_0$ having multiple non-zero entries would allow for stronger multi-pollutant effects.   Box constraints, such as the entries of $\alpha$ being positive, should be relatively simple to implement.
+
+Anticipating that the posterior of $\alpha$ will often have flat ridges, interpreted as overall pollution is known to be harmful but specific components may or may not be, communicating results to health scientists will be challenging.  Finding intuitive and interpretable low-dimensional functions of $\alpha$ which convey the 'known' and 'unknown' components of the results will be a second important task in this objective.
 
 
-identifiability, mixing, priors, case-crossover
 
-Regarding the first methodological innovation, the cGAIM uses an iterative two-step optimization scheme. In the first step $\alpha$ is updated using a quadratic program, while in the second $s$ is updated using the methodology from @pya2015shape. Any linear constraint can be placed on $\alpha$. For example, it can be constrained to have non-negative components that sum to one, so that it is a vector of weights. Once estimated, these weights give the relative contribution of each component to the outcome of interest. The cGAIM can also constrain the shape of $s$ by requiring it to, for example, be monotonic or convex. 
-
-For the second extension, the bcGAIM It will initially be implemented in Stan, a statistical modeling language that facilitates iterative model development [@carpenter2017stan]. For the multi-pollutant model, doing so will allow us to extend the bcGAIM to additional pollutants, additional lags for pollutants, and additional smooth functions $s$. We expect that $\alpha$ will not always be well identified, and the results will be sensitive to model assumptions and prior distributions. A major task in this component of the research will be to find reparametrizations and multivariable prior distributions that enable prior elicitation from subject-area specialists. After bcGAIM is implemented for a three-dimensional $\alpha$ (with covariates O~3~, PM~2.5~, and NO~2~ at two day lags), additional time lags will be added with the resulting $\alpha$ being 9-12 dimensional. The computational and methodological challenges at this stage are expected to be significant, and parallelizing the algorithm on cloud platforms will be used to dramatically increase the number of candidate values of $\alpha$ considered.
-
-
-
-### algorithm
+### Computation
 
 For the fourth methodological extension, we will develop non-MCMC inference methods similar in spirit to INLA [@rue2009approximate]. The Latent Gaussian approximation in INLA separates the parameter space into covariance parameters $\theta$ and linear predictors $\eta = (\beta, \theta, f)$, and considers $\pi( \eta | Y, \theta)$, $\pi( \theta | Y)$, and $\pi(\eta | Y) = \int \pi(\eta | Y, \theta) \pi(\theta | Y) d\theta$ (the last one numerically). INLA performs approximate inference on $\theta$ by estimating $\phi( \theta | Y, \phi )$ with a normal distribution with mean $\theta^{*}$ and variance $\Sigma^{*}$. If the likelihood is log-concave and Gaussian priors are used, $\pi( \theta | Y, \phi )$ is unimodal and is well-approximated by the Laplace approximation. In @margossian2020hamiltonian, the authors estimate $\pi( \theta | Y, \phi)$ with the Laplace approximation and $\pi( \theta | T)$ with Hamiltonian Monte Carlo. They find that this performs well for their examples, both of which have log-concave likelihoods.
 
@@ -81,7 +80,7 @@ Let us translate this reasoning to the bcGAIM, which has link function $g(\lambd
 
 
 
-### monotonicity
+### Monotonicity
 
 The cGAIM considers both constraints and groupwise additive index terms, while much of the existing literature only considers groupwise additive terms. For example, @hardle1993optimal focus on a single index and minimizes a least-squares criteria where  a trimmed version of a leave-one-out Nadaraya-Watson estimator of $s$ is used to jointly choose the bandwidth parameter and estimate $\alpha$. For several indices, @wang2015estimation minimize a least-squares criteria via a two-stage estimation procedure. They derive large-sample properties of this least-squares estimator, and propose a penalized least-squares estimator for sparse high-dimensional settings. A few other papers propose alternative objective function similar to least-squares but none of these papers consider constrained estimation [@li2010groupwise; @guo2015groupwise; @wang2017robust]. 
 
