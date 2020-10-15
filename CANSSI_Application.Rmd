@@ -192,18 +192,28 @@ Source: https://stackoverflow.com/questions/46738721/how-can-i-bring-back-indent
 
 <!-- Describe roles of undergraduate and graduate students and postdoctoral fellows in the project. Indicate the proposed home institution of the various personnel, how they will be mentored and included in the project, and how they would contribute to the cohesion of the team (e.g. through joint supervision arrangements). Limit to one page. --> 
 
-**THIS NEEEDS TO BE UPDATED TO MATCH THE RESPONSE TO THE SAC's QUESTIONS**
 
-Kamal Rai will complete his PhD in 2021 and will work on this project as a postdoc.  He will develop the Bayesian implementation of the GAIM models in Stan. This includes exploring determining appropriate prior distributions for the weights $\alpha$, developing visualizations that communicate modeling results, and assisting other project members in developing shape constraints. He will be responsible for producing paper(s) summarizing the results of this model when run on Canadian air pollution and mortality data. To facilitate team communication and cohesion, he will also split time between Toronto (at the Centre for Global Health Research) and Ottawa (at the University of Ottawa), and use the proximity of the University of Ottawa to Quebec to occasionally visit project collaborators located there.
+Kamal Rai will complete his PhD in 2021 and the intention is for him to work on this project as a postdoc.  He will develop the Bayesian implementation of the GAIM models in Stan. This includes exploring determining appropriate prior distributions for the weights $\alpha$, developing visualizations that communicate modeling results.  Following this, he will work on either the shape-constrained models or the INLA-like algorithm, depending on the project chosen by the PhD student. He will be responsible for producing paper(s) summarizing the results of this model when run on Canadian air pollution and mortality data. To facilitate team communication and cohesion, he will spend the first year in Toronto under the supervision of Drs. Brown and Franklin, and then relocate to Halifax to work with Drs. Feng and Rainham at Dalhousie.
 
-The University of Toronto PhD student will develop the INLA-like Bayesian computations to conduct inference on the GAIM, and compare its results from those obtained from the Stan implementation. A University of Laval or University of Ottawa PhD student will develop methods to conduct shape-constrained (Bayesian) inference, and examine the relationship between COVID-19 deaths and air pollution levels. 
+A PhD student will be based at INRS in Quebec City under the primary supervision of Fateh Chebana.  Depending on the interests and abilities of the student, they will work on either shape-constrained models or the INLA-like algorithm (or possible both).  This student will also lead the application of the methods to the Quebec data, which cannot leave the province.  This student will interact regularly with all four investigators via videoconference. At least one of the Toronto or Dalhousie investigators will be a co-supervisor and a year-long visit to Dalhousie or Toronto will be encouraged.
+
+Each year one MSc student at Dalhousie (or possibly Toronto) will be assigned a project aligned with their interests and abilities.  A more mathematically-focused project could be prior distributions for Gaussian processes which are near-monotonic, an application-driven project would be to do thorough comparison of the methods developed to existing methodologies.  Co-supervision by Investigators at different institutions will be pursued where possible.
+
+Two summer NSERC undergraduate research students per year will be engaged to work on a project closely aligned with the CRT graduate student or postoc at their institution, who will provide the day-to-day supervision.
 
 
 **Equity, Diversity, Inclusion**
 
 <!-- Explain how the project addresses the EDI priorities of NSERC and CANSSI (http://www.canssi.ca/home/a-note-on-diversity). Limit to half a page. --> 
 
-**THIS NEEDS TO BE COMPLETED**
+An attempt has been made to assemble a diverse team.  Two of the four investigators are women and two are ethnic minority.  The proposed postdoc is also ethnic minority, the collaborators include a further two women and two ethnic minorities.  Several of the investigators have young children and are sympathetic to any family commitments which collaborators and trainees may have.  While there are important groups which are not currently reflected in the team, the investigators are committed to making all potential team members welcome and value the range of opinions and experiences which a diverse team will bring.  
+
+The Centre for Global Health Research (CGHR) has a history of hosting visiting scholars from all parts of the globe, including many from Africa.  It is both because of the links CGHR has internationally and the focus of the research which attracts an ethnically and geographically diverse group.  Ongoing research projects concern sex-selective abortion, gun violence and ethnicity in several countries in North and South America, and the effects of poverty and illiteracy on mortality in India.  In advertising for trainees, we will state that applicants wishing to work with problems in global health, marginalized communities, or sex discrepancies in health outcomes would be able to work on applications in these areas.  
+
+
+While it is intended that the trainees will travel between the three cities (and Ottawa), it is understandable that family or other commitments may require relying on videoconference in some cases.  Prospective trainees wishing to work primarily in French could be accommodated with co-supervision by Drs. Brown and Chebana.  We expect that the combination of this exciting application area and the diversity of the research team will encourage participation from individuals who currently feel excluded by research in the mathematical sciences.
+
+
 
 **Anticipated organization of collaboration**
 
