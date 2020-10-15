@@ -8,7 +8,7 @@ SED = sed
 PANDOCCROSSREF=--filter=pandoc-crossref
 
 
-all: CANSSI_Letter_of_Submission.pdf CANSSI_Research_Aims.pdf
+all: CANSSI_Letter_of_Submission.pdf CANSSI_Research_Aims.pdf CANSSI_Application.pdf
 
 %.tex: %.Rmd
 	$(PANDOC) --standalone $(PANDOCCROSSREF) --biblatex $(pandocArgs) --from=markdown --to=latex $< | $(SED) s/\\\\usepackage{subfig}// > $@

@@ -44,13 +44,13 @@ font: "Times New Roman"
 - Fateh Chebana 
     - Centre Eau Terre Environnement, Institut national de la recherche scientifique, Québec.
 - Cindy Feng 
-    - School of Epidemiology and Public Health, University of Ottawa
+    - Department of Community Health and Epidemiology, Dalhousie University
 - Meredith Franklin 
     - Keck School of Medicine, University of Southern California (until July 2021) 
     - School for the Environment and Department of Statistical Sciences, University of Toronto (from July 2021)
 
 
-**List of proposed collaborators, titles, and affiliations**
+**List of collaborators, titles, and affiliations**
 
 Name: Kamal Rai <br/>  
 Title: PhD student<br/>  
@@ -80,7 +80,7 @@ Affiliation: London School of Hygiene & Tropical Medicine, United Kingdom
 
    
 
-**List of potential partner organizations**
+**List of partner organizations**
 
 - The **Centre for Global Health Research, St. Michael's Hospital** will lead the health sciences research component of the project, providing data from the US and India and time of research staff to work on manuscripts. The Toronto-based component of the team will be located at the Centre for Global Health Research (CGHR) and will be integrated into the Geospatial Mortality research group Dr. Brown leads. A portion of the Toronto PhD student's salary will be funded though a CGHR research grant.
 
