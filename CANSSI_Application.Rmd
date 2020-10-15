@@ -205,10 +205,12 @@ Two summer NSERC undergraduate research students per year will be engaged to wor
 
 An attempt has been made to assemble a diverse team.  Two of the four investigators are women and two are ethnic minority.  The proposed postdoc is also ethnic minority, the collaborators include a further two women and two ethnic minorities.  Several of the investigators have young children and are sympathetic to any family commitments which collaborators and trainees may have.  While there are important groups which are not currently reflected in the team, the investigators are committed to making all potential team members welcome and value the range of opinions and experiences which a diverse team will bring.  
 
-The Centre for Global Health Research (CGHR) has a history of hosting visiting scholars from all parts of the globe, including many from Africa.  It is both because of the links CGHR has internationally and the focus of the research which attracts an ethnically and geographically diverse group.  Ongoing research projects concern sex-selective abortion, gun violence and ethnicity in several countries in North and South America, and the effects of poverty and illiteracy on mortality in India.  In advertising for trainees, we will state that applicants wishing to work with problems in global health, marginalized communities, or sex discrepancies in health outcomes would be able to work on applications in these areas.  
+The Centre for Global Health Research (CGHR) has a history of hosting visiting scholars from all parts of the globe, including many from Africa.  It is both because of the links CGHR has internationally and the focus of the research which attracts an ethnically and geographically diverse group.  Ongoing research projects concern sex-selective abortion, gun violence and ethnicity in several countries in North and South America, and the effects of poverty and illiteracy on mortality in India.  
+
+In advertising for trainees, we will state that applicants wishing to work with problems in global health, marginalized communities, or sex discrepancies in health outcomes would be able to work on applications in these areas.  To give one example, snakebite causes over 50,000 deaths annually in India, mostly in deprived rural areas.  Data from the Million Deaths Study has shown strong seasonal variation and appears to be correlated with environmental factors.  Using bcGAIM it should be possible to quantify how rainfall, temperature, and agricultural schedules affect snakebite mortality.
 
 
-While it is intended that the trainees will travel between the three cities (and Ottawa), it is understandable that family or other commitments may require relying on videoconference in some cases.  Prospective trainees wishing to work primarily in French could be accommodated with co-supervision by Drs. Brown and Chebana.  We expect that the combination of this exciting application area and the diversity of the research team will encourage participation from individuals who currently feel excluded by research in the mathematical sciences.
+While it is intended that the trainees will travel between the three cities (and Ottawa), it is understandable that family or other commitments may require relying on videoconference in some cases.  Prospective trainees wishing to work primarily in French could be accommodated with co-supervision by Drs. Brown and Chebana.  We expect that the combination of this exciting application area and the diversity of the research team will encourage participation from individuals who currently feel excluded by the mathematical sciences research community.
 
 
 
@@ -216,9 +218,16 @@ While it is intended that the trainees will travel between the three cities (and
 
 <!-- Describe plans for supporting collaboration, e.g. indicating how members of the team would communicate, group meetings, exchanges of students and postdoctoral fellows, dealing with disciplinary and geographic hurdles to the collaboration. Limit to one page. --> 
 
-**THIS NEEEDS TO BE UPDATED TO MATCH THE RESPONSE TO THE SAC's QUESTIONS**
+The past 6 months have demonstrated both the feasibility of remote collaborations via videoconference and the drawbacks to extended periods without in-person communication.  The team will have three organizational structures:  strong local relationships; extended visits by trainees; and team-wide meetings.
 
-The research team is situated in three cities - Toronto, Quebec, and Halifax. Two investigators, Patrick Brown and Meredith Franklin, will be in Toronto at the University of Toronto. One investigator and one collaborator, Cindy Feng and Daniel Rainham, will be in Halifax at Dalhousie University. Finally, one investigator, Fateh Chebana, will be in Quebec at INRS.
+Each research activity will be anchored by a trainee who will have a principle supervisor at their local institution and a co-supervisor at one of the other two sites.  Each of these groups will meet weekly, with the remote supervisor possibly joining bi-weekly.  The trainee in question will be responsible for organizing meetings, keeping track of tasks, and circulating a summary of the discussion after each meeting.
+
+
+These teams will be combined into sub-projects (e.g. computational sub-project or AQHI sub-project) which will meet monthly.  Meetings of the entire CRT will happen every other month, with one yearly day-long in-person meeting of the entire group (likely before or after the Statistical Society of Canada conference).  The postdoc will organize these meetings.  The four Investigators will form an 'executive group' and will meet separately as needed.
+
+The group will set up a Slack channel for messaging and a Github repository for hosting code and documents under version control.  To facilitate collaboration on software and manuscripts, code will be structured in R packages (even code for internal use only) and documents prepared using R Markdown.  
+
+
 
 
 **Plans for dissemination and communication**
