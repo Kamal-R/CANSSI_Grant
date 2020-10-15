@@ -24,14 +24,6 @@ link-citations: true
 font: "Times New Roman"
 ---
 
-\vspace{-2em}
-
-**Letter of Submission**
-
-**THIS NEEDS TO BE UPDATED -- SEE THE DOCUMENT ON GITHUB**
-
-
-\clearpage
 
 **Title of the Project**: Statistical Methods for Daily Mortality and Multiple Environmental Risk Factors
 
