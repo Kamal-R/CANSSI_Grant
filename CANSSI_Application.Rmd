@@ -236,14 +236,52 @@ The group will set up a Slack channel for messaging and a Github repository for 
 
 The lead investigators of this proposal have a track record of publishing research results in leading statistical and epidemiological journals, and aim to publish the results of this project in high-impact journals. The results and findings of this multiple pollutant inquiry will also be shared with Health Canada and the Institut National de Santé Publique du Québec.   Drs Shin and Campagna will use the methodologies developed in their ongoing research and programatic work, and facilitate the adoption of the methods more widely in their organizations.
 
+Members of the team will present regularly at international conferences, such as the International Environmetrics Society (TIES) Conference.  Invited sessions on the CRT's work will be proposed annually for the SSC conference.  By the end of the three year grant period, we will have an R package implementing bcGAIM with worked examples.  Material for a short course will be written and offered as one-day workshops.  Specific papers are listed in the Schedule of Events below.
+
 
 **Schedule of events** 
 
 <!-- Provide a three-year calendar or schedule of major collaborative activities, dissemination and publication activities, and any project milestones. --> 
 
-**THIS NEEDS TO BE UPDATED**
 
-\underline{Project Milestones}
+- April 2021
+    - Start of project, initial meeting of investigators
+- Summer 2021
+    - Meetings with Health Canada, INSPQ to finalize basic bcGaim (MCMC, latent Gaussian)
+- Fall 2021
+    - Beta version of basic bcGAIM R package 
+- Winter 2022
+    - Completion of first bcGAIM manuscript for applied stats journal (i.e. _JRSSC_)
+- Spring 2022 
+    - First applied paper on AQHI submitted to Health Canada for approval
+    - 1 day group meeting and invited session at SSC conference
+- Summer 2022
+    - Latent Gaussian near-monotone smoothing incorporated into R package
+    - Penalized Complexity priors for bcGaim beta version software 
+- Fall 2022
+    - Non-Gaussian monotone smoothing incorporated into R package
+    - INLA algorithm alpha version R package
+- Winter 2023
+    - Monotone bcGAIM methods paper completed (i.e. _JCGS_)
+    - PC Priors for bcGAIM paper submitted (i.e. _Bayesian Analysis_)
+- Spring 2023
+    - INLA-like algorithm methods paper submitted to statistical journal (i.e. _Statistics in Medicine_)
+    - Draft of epidemiological paper on short term pollution and COVID-19 submitted (i.e. _BMJ Open_)
+    - 1 day group meeting and invited session at SSC conference
+- Summer 2023
+    - Software paper on bcGAIM package submitted (i.e. _Journal of Statistical Software_)
+- Fall 2023
+    - Second applied AQHI paper submitted to Health Canada for approval
+- Winter 2024
+    - Epidemiological paper on acute mortality submitted to high impact journal (i.e. _Lancet_)
+    - Submit proposals for short courses to conferences (i.e. JSM, IBC)
+- March 2024
+    - End of project funding
+- May 2024
+    - 1 day group meeting and invited session at SSC conference
+
+ANYTHING BELOW THAT'S IMPORTANT BUT NOT INCLUDED ABOVE?
+
 
 Task: Develop the bcGAIM 
 
