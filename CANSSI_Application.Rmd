@@ -233,7 +233,6 @@ The group will set up a Slack channel for messaging and a Github repository for 
 
 <!-- Describe plans for dissemination and communication, e.g., organization of specialized professional meetings, organized presentations at large professional meetings, preparation of short courses, surveys, and notes, software, publicly accessible publications, and so on, expanding on the description in the Letter of Intent. Limit to half a page. -->
 
-**THIS NEEDS TO BE UPDATED**
 
 The lead investigators of this proposal have a track record of publishing research results in leading statistical and epidemiological journals, and aim to publish the results of this project in high-impact journals. The results and findings of this multiple pollutant inquiry will also be shared with Health Canada and the Institut National de Santé Publique du Québec.   Drs Shin and Campagna will use the methodologies developed in their ongoing research and programatic work, and facilitate the adoption of the methods more widely in their organizations.
 
