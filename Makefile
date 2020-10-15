@@ -28,6 +28,10 @@ all: CANSSI_Letter_of_Submission.pdf CANSSI_Application.pdf
 	$(XELATEX) -interaction=nonstopmode $<;
 	$(XELATEX) $<
 
+%.pdf: %.md
+	$(PANDOC) --from=markdown --to=pdf --output=$@ $<
+
+
 
 clean:
 	rm *.aux *.bbl *.bcf *.log *.run.xml *.blg
