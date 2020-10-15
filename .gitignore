@@ -11,3 +11,4 @@ CANSSI_Letter_of_Submission.pdf
 *.aux
 *.bbl
 *.bcf
+.Rproj.user
