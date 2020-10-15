@@ -222,7 +222,6 @@ The past 6 months have demonstrated both the feasibility of remote collaboration
 
 Each research activity will be anchored by a trainee who will have a principle supervisor at their local institution and a co-supervisor at one of the other two sites.  Each of these groups will meet weekly, with the remote supervisor possibly joining bi-weekly.  The trainee in question will be responsible for organizing meetings, keeping track of tasks, and circulating a summary of the discussion after each meeting.
 
-
 These teams will be combined into sub-projects (e.g. computational sub-project or AQHI sub-project) which will meet monthly.  Meetings of the entire CRT will happen every other month, with one yearly day-long in-person meeting of the entire group (likely before or after the Statistical Society of Canada conference).  The postdoc will organize these meetings.  The four Investigators will form an 'executive group' and will meet separately as needed.
 
 The group will set up a Slack channel for messaging and a Github repository for hosting code and documents under version control.  To facilitate collaboration on software and manuscripts, code will be structured in R packages (even code for internal use only) and documents prepared using R Markdown.  
@@ -348,8 +347,6 @@ The different components of the bcGAIM project are naturally related. The bcGAIM
 
 
 **Three-year budget**
-
-**THIS NEEDS MILD UPDATES - I CAN DO THESE**
 
 <!-- Provide a tentative three-year budget table showing the expenditures in each of the three years for undergraduate and graduate student funding, postdoctoral fellow funding, student travel, visitor travel, and costs associated with dissemination and publication of results. For each item, indicate the funding from CANSSI and the funding from other sources if applicable. If relevant, identify other sources of funding in footnotes below the table. CANSSI funding can be used only for NSERC eligible expenses. For the competition in 2020, the CANSSI funding over the three years should sum to $200,000. --> 
 
