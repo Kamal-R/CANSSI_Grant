@@ -101,8 +101,7 @@ Affiliation: London School of Hygiene & Tropical Medicine, United Kingdom
 
 There is growing interest in developing a simple, intuitive air quality index that combines multiple pollutants while simultaneously estimating their health effects [@dominici2010protecting; @stieb2008new; @bopp2018something]. Typically, health effects associated with exposure to air pollution focus on one pollutant at a time, but this ignores the fact that realistiaclly, exposures are complex mixtures of multiple pollutants [@dominici2010protecting]. Thus, an air quality index that reflects this complex mixture is needed and should account for the levels and relative contributions of multiple air pollutants together. In this proposal we present an improved statistical method that allows us to model multiple environmental pollutants while simultaneously estimating their health effects. With this method we are also able to conduct inference on the health effect estimates. We demonstrate our approach by focusing on quantifying the short-term health effects associated with air pollution mixtures at the population level.
 
-The *constrained groupwise additive index model* (cGAIM), introduced by @hardle1993,
-is a vehicle for providing a multi-pollutant health index. Given $\lambda_{it}$ representing a particular health outcome for an individual $i$ on day $t$,  the cGAIM is
+The *constrained groupwise additive index model* (cGAIM), introduced by @pierre2020aim, is a vehicle for providing a multi-pollutant health index. Given $\lambda_{it}$ representing a particular health outcome for an individual $i$ on day $t$,  the cGAIM is
 $$
   \lambda_{it} = \exp\left[ X_{it}^{T}\beta + s(\alpha^{T} Z_{it} ) + f_{1}( W_{1it} ) + \ldots + f_{K}( W_{Kit} ) \right],
 $$
@@ -111,11 +110,9 @@ where $\beta$ parameters are the fixed effects of the potentially time-varying l
 To date, cGaim has been developed for Poisson models, namely where the outcome is case counts (e.g. number of asthma-related hospital visits in a county). We will expand its usage to case crossover models, which have seen increased attention in the air pollution literature [@wei2019short; @stringer2020approximate].  In case crossover models we can examine individual-level data, whereby the exposure on an event or case day is compared to the exposure on referent or *control days* for each case. For example, the air polution concentrations on a day of an individual's hospital visit will be conditioned on the same individual's exposure on pre-selected control days, perhaps chosen as the air pollution concentrations on same day of the week from the previous two weeks. Case crossover models use a partial likelihood for the probability the event occurs on the case day rather than the control days. The advantage of case crossover models is that individual-level confounders are automatically adjusted for, as are risk factors which vary slowly or not at all, or are the same on the case and control days.  The challenge introduced by case crossover models is the likelihood depends on non-linear combinations of the latent variables (i.e. $s$). 
 
 
-Estimating $\alpha$ is the main statistical challenge with the cGAIM, which @pierre2020aim 
-accomplish with frequentist inference methods that use sequential quadratic programming.  We will develop a Bayesian methodology for inference with the cGAIM --- the bcGAIM --- which will estimate and fully quantify the uncertainty around $\alpha$ as well as propagate the uncertainty into inference on $s$.  
+Estimating $\alpha$ is the main statistical challenge with the cGAIM, which @pierre2020aim accomplish with frequentist inference methods that use sequential quadratic programming.  We will develop a Bayesian methodology for inference with the cGAIM --- the bcGAIM --- which will estimate and fully quantify the uncertainty around $\alpha$ as well as propagate the uncertainty into inference on $s$. The bcGAIM will also able to efficiently handle higher dimensional $\alpha$ and $Z_{it}$, which is a significant improvement over cGAIM and an important feature of the model as we aim to model complex multi-pollutant mixtures.
 
-The bcGAIM will also able to efficiently handle higher dimensional $\alpha$ and $Z_{it}$, which is a significant improvement over cGAIM and an important feature of the model as we aim to model complex multi-pollutant mixtures.
-
+<!-- introduced by @hardle1993 and @xia2006cumulative -->
 
 ## Outcomes and applications
 
