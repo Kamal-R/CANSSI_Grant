@@ -1,0 +1,257 @@
+---
+title: ""
+output: 
+    pdf_document:
+        keep_tex: true
+header-includes:  
+    - \usepackage{geometry} 
+    - \usepackage{array, makecell}
+geometry: margin=1in 
+fontsize: 12pt
+font: Times New Roman
+documentclass: article
+classoption: letterpaper
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+## CANSSI: Draft Budget 
+
+The table below lists income and expenses for each of the three years of the project. This budget assumes that CANSSI funding over the 3 year period is \$200,000. 
+
+```{r CANSSI-Budget-Yearly-Breakdown}
+Expenses <- t( data.frame( "\\makecell[l]{Postdotor-\\\\al Fellow}", 
+                           "\\makecell[l]{Graduate \\\\ Students}",
+                           "\\makecell[l]{Graduate \\\\ Students}",
+                           "\\makecell[l]{Undergrad \\\\ Students}",
+                           "\\makecell[l]{Undergrad \\\\ Students}",
+                           "\\makecell[l]{Research \\\\ Assistant}",
+                           "\\makecell[l]{INSPQ \\\\ Staff Time}",
+                           "Travel",
+                           "\\textbf{Total}" ) )
+
+Contributions_1_Names_Non_CANSSI <- t( data.frame( "HC",
+                                        "INRS", 
+                                        "NSERC", 
+                                        "USRA",
+                                        "DG",
+                                        "CGHR",
+                                        "INSPQ",
+                                        " ",
+                                        "  ") )
+
+Contributions_1_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$7}",
+                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
+
+Contributions_2_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$7}",
+                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
+
+Contributions_3_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$9}",
+                                         "\\makecell[c]{\\textbf{\\$68}}" ) )
+
+Contributions_1_Non_CANSSI <- t( data.frame( "HC: \\space \\space \\space \\space \\space \\$20",
+                                         "INRS: \\space \\space \\$10",
+                                         "NSERC: \\$7",
+                                         "USRA:  \\space  \\space \\$9",
+                                         "DG:  \\space  \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR: \\$10",
+                                         "INSPQ: \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+Contributions_1_Non_CANSSI[1] <- paste0("HC\\textbf{", kableExtra::footnote_marker_number(1), "}",
+                                        " \\space \\space \\space \\space \\space \\space \\$20")                               
+Contributions_1_Non_CANSSI[2] <- paste0("INRS\\textbf{", kableExtra::footnote_marker_number(2), "}",
+                                        " \\space \\space \\space \\$20")                                     
+Contributions_1_Non_CANSSI[3] <- paste0("NSERC\\textbf{", kableExtra::footnote_marker_number(3), "}", 
+                                        " \\space \\$7" )
+Contributions_1_Non_CANSSI[4] <- paste0("USRA\\textbf{", kableExtra::footnote_marker_number(4), "}", 
+                                        " \\thinspace \\thinspace \\space \\space \\$9" )
+Contributions_1_Non_CANSSI[5] <- paste0("DG\\textbf{", kableExtra::footnote_marker_number(5), "}",
+                                        " \\thinspace \\space \\space \\space \\space \\space  \\space \\$3")
+Contributions_1_Non_CANSSI[6] <- paste0("CGHR\\textbf{", kableExtra::footnote_marker_number(6), "}", 
+                                        " \\thinspace \\thinspace \\$10")
+Contributions_1_Non_CANSSI[7] <- paste0("INSPQ\\textbf{", kableExtra::footnote_marker_number(7), "}", 
+                                        " \\thinspace \\thinspace \\$10")
+
+Contributions_2_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
+                                         "INRS \\space \\space \\space \\space \\space \\$10",
+                                         "NSERC \\space \\space \\space \\$7",
+                                         "USRA \\space \\space \\space \\space \\space \\$9",
+                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR \\space \\space \\space \\$10",
+                                         "INSPQ \\space \\space \\space \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+Contributions_3_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
+                                         "INRS \\space \\space \\space \\space \\space \\$10",
+                                         "NSERC \\space \\space \\space \\$7",
+                                         "USRA \\space \\space \\space \\space \\space \\$9",
+                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR \\space \\space \\space \\$10",
+                                         "INSPQ \\space \\space \\space \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+
+Budget_Table <- cbind( Expenses, Contributions_1_CANSSI, 
+                                 Contributions_1_Non_CANSSI, 
+                                 Contributions_2_CANSSI, 
+                                 Contributions_2_Non_CANSSI,
+                                 Contributions_3_CANSSI, 
+                                 Contributions_3_Non_CANSSI )
+colnames(Budget_Table) = c( "", "CANSSI", "Non-CANSII", 
+                                "CANSSI", "Non-CANSSI", 
+                                "CANSSI", "Non-CANSSI" )
+rownames(Budget_Table) = NULL 
+
+knitr::kable( Budget_Table, booktabs = TRUE, escape = FALSE,
+              format = "latex",  label = "Budget-Table" ) %>%
+kableExtra::row_spec(0, align = "l") %>%
+kableExtra::column_spec( c(1,3,5,7), border_right = TRUE) %>%
+kableExtra::column_spec( c(1,2), border_left = TRUE) %>%
+kableExtra::collapse_rows(columns = c(1,2,4,6)) %>%
+kableExtra::add_header_above( c(" " = 1, "Year 1" = 2, "Year 2" = 2, "Year 3" = 2) ) %>%
+kableExtra::add_header_above( c("Expenses" = 1, "Contributions (in 1,000's)" = 6) ) %>%
+kableExtra::footnote(number = c( "HC: Health Canada", "INRS: Institut national de la recherche scientifique", "NSERC: The Natural Sciences and Engineering Research Council of Canada", "USRA: NSERC Undergraduate Student Research Award", "DG: NSERC Discovery Grant", "CHGR: Centre for Global Health Research", "INSPQ: Institut national de santé publique du Québec (Quebec Public Health Institute)" ))
+```
+
+\underline{Annual Expenses}
+
+\begin{enumerate}
+    \item Postdoctoral Fellow: The postdoctoral fellow will be funded from the CANSSI CRT grant and Health Canada. He will help organize team meetings, split time between Toronto and Halifax, and help onboard other students as they join the project. 
+    
+    \item Graduate Students: 1 PhD student and 1 Master's student will be involved in this project. One of the graduate students will be based at INRS, the other will be at the University of Toronto or Dalhousie University.  
+
+    \item URSA Students: This project will have a number of self-contained projects suitable for undergraduate research assistants. We intend to involve 2 URSAs at \$6,000/year each, whose work will directly contribute to the project's research aims.
+    
+    \item Research Assistant: Hana Fu at CGHR will contribute roughly 3 days/month to the project. She will help maintain project data files and perform preliminary analysis. 
+    
+    \item INSPQ Staff Time: Céline Campagna at INSPQ will devote 0.5 days/week to the project. 
+    
+    \item Travel/Equipment: The travel expenses will cover attending conferences and travel between the three institutions by the project trainees. The equipment spending is intended to cover new computing equipment or cloud computing costs. 
+\end{enumerate}
+
+\underline{Contributions}
+
+\begin{enumerate}
+    \item CANSSI: The CANSSI funding is \$200,000 over three years, or \$66,666 per year. 
+    
+    \item Health Canada: Health Canada will contribute \$20,000 per year via research contracts. 
+    
+    \item INRS: Fateh Chebana will contribute \$10,000 in graduate student funding.
+    
+    \item NSERC: Cindy Feng will contribute \$7,000/year in graduate student funding. 
+    
+    \item INSPQ: The INSPQ will contribute staff time to the project, estimated at \$10,000/year for 3 years.
+    
+    \item CGHR: CGHR's support will be in-kind, in the form of funding the research assistant and providing research facilities.
+    
+    \item Undergraduate Summer Students: Two USRAs will be applied for each year, which will pay for undergraduate summer students. NSERC also requires a contribution from the Discovery Grant of the supervisor. 
+\end{enumerate}
+
+
+
+
+<!--
+\clearpage
+# Organization 
+
+\underline{Principal Investigators}
+
+1. Name: Patrick E. Brown $\\$
+Title: Scientist and Associate Professor $\\$
+Affiliations 
+    + The Centre for Global Health Research, St. Michael's Hospital. Toronto, Ontario. 
+    + The Department of Statistical Sciences, University of Toronto. Toronto, Ontario. $\\$
+
+
+2. Name: Cindy Feng $\\$
+Title: Associate Professor $\\$
+Affiliation 
+    + Department of Community Health and Epidemiology, Dalhousie University. Halifax, Nova Scotia. $\\$
+
+3. Name: Meredith Franklin  $\\$
+Title: Associate Professor $\\$
+Affiliations 
+    + Keck School of Medicine, University of Southern California (until July 2021). Los Angeles, California. 
+    + School of the Environment and Department of Statistical Sciences, University of Toronto (from July 2021). Toronto, Ontario. $\\$
+
+4. Name: Fateh Chenaba $\\$
+Title: Professor $\\$
+Affiliation 
+    + Centre Eau Terre Environnement, Institut national de la recherche scientifique. Québec City, Quebec. 
+    + Laval University ? $\\$
+
+
+\clearpage
+\underline{Collaborators}
+
+1. Name: Hwashin Shin $\\$
+Title: Scientist. $\\$
+Affiliation 
+    + Environmental Health Science and Research Bureau, Health Canada. Ottawa, Ontario. $\\$
+
+2. Name: Céline Campagna $\\$
+Title: Responsable scientifique $\\$
+Affiliation
+    + Équipe Changements climatiques et santé, Institut National de Santé Publique du Québec. Quebec City, Quebec. $\\$
+
+3. Name: Pierre Masselot $\\$
+Title: Research Fellow $\\$
+Affiliation 
+    + London School of Hygiene & Tropical Medicine. London, United Kingdom $\\$
+
+4. Name: Prabhat Jha $\\$
+Title: Director of the Centre for Global Health Research and University Professor $\\$
+Affiliation 
+    + Center of Global Health Research, St. Michael's Hospital. Toronto, Ontario. 
+    + Professor, Dalla Lana School of Public Health, University of Toronto. Toronto, Ontario. $\\$
+
+
+\clearpage
+
+
+
+\underline{Trainees}
+
+1. One CRT-Funded Postdoctoral Student
+
+Kamal will complete his PhD in 2021 and will work on this project as a postdoctoral student  He will develop the Bayesian implementation of the GAIM models in Stan. This includes exploring appropriate prior distributions for the weights $\alpha$, developing visualizations that communicate the modeling results, and assisting other project members in developing shape constraints. He will be responsible for producing paper(s) summarizing the results of this model when run on Canadian air pollution and mortality data. To facilitate team communication and cohesion, he will also split time between Toronto (at the Centre for Global Health Research) and Halifax (at the University of Dalhousie). He will also make occasional trips to Ottawa and the Quebec to visit project collaborators located in these regions. 
+
+While in Toronto, Halifax, and the Quebec region he will be supervised by the principal investigators in those locations. To further aid project coordination, the project team at each location will hold weekly meetings, and the entire project team will hold (virtual) monthly meetings. In addition, we will meet in person once per year at or around the SSC conference.
+
+2. Two PhD Students - University of Toronto and (Laval University or Dalhousie)
+
+The University of Toronto PhD student will develop INLA-like Bayesian computation methods to conduct inference on the GAIM, and compare its results from those obtained from the Stan implementation. A University of Laval or University of Dalhousie PhD student will develop methods to conduct shape-constrained (Bayesian) inference, and examine the relationship between COVID-19 deaths and air pollution levels. 
+
+3. Two USRA Students
+
+These students will contribute to the projects attached to the postdoctoral and PhD students. (This section needs more details)
+
+-->
