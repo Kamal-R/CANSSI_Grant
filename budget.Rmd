@@ -1,0 +1,122 @@
+stuff
+
+
+```{r CANSSI-Budget-Yearly-Breakdown, echo = FALSE}
+library(magrittr) 
+Expenses <- t( data.frame( "\\makecell[l]{Postdotor-\\\\al Fellow}", 
+                           "\\makecell[l]{Graduate \\\\ Students}",
+                           "\\makecell[l]{Graduate \\\\ Students}",
+                           "\\makecell[l]{Undergrad \\\\ Students}",
+                           "\\makecell[l]{Undergrad \\\\ Students}",
+                           "\\makecell[l]{Research \\\\ Assistant}",
+                           "\\makecell[l]{INSPQ \\\\ Staff Time}",
+                           "Travel",
+                           "\\textbf{Total}" ) )
+
+Contributions_1_Names_Non_CANSSI <- t( data.frame( "HC",
+                                        "INRS", 
+                                        "NSERC", 
+                                        "USRA",
+                                        "DG",
+                                        "CGHR",
+                                        "INSPQ",
+                                        " ",
+                                        "  ") )
+
+Contributions_1_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$7}",
+                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
+
+Contributions_2_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$7}",
+                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
+
+Contributions_3_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-1}",
+                                         "\\textcolor{white}{1-2}",
+                                         "\\textcolor{white}{1-3}",
+                                         "\\makecell[c]{\\$9}",
+                                         "\\makecell[c]{\\textbf{\\$68}}" ) )
+
+Contributions_1_Non_CANSSI <- t( data.frame( "HC: \\space \\space \\space \\space \\space \\$20",
+                                         "INRS: \\space \\space \\$10",
+                                         "NSERC: \\$7",
+                                         "USRA:  \\space  \\space \\$9",
+                                         "DG:  \\space  \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR: \\$10",
+                                         "INSPQ: \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+Contributions_1_Non_CANSSI[1] <- paste0("HC\\textbf{", kableExtra::footnote_marker_number(1), "}",
+                                        " \\space \\space \\space \\space \\space \\space \\$20")                               
+Contributions_1_Non_CANSSI[2] <- paste0("INRS\\textbf{", kableExtra::footnote_marker_number(2), "}",
+                                        " \\space \\space \\space \\$20")                                     
+Contributions_1_Non_CANSSI[3] <- paste0("NSERC\\textbf{", kableExtra::footnote_marker_number(3), "}", 
+                                        " \\space \\$7" )
+Contributions_1_Non_CANSSI[4] <- paste0("USRA\\textbf{", kableExtra::footnote_marker_number(4), "}", 
+                                        " \\thinspace \\thinspace \\space \\space \\$9" )
+Contributions_1_Non_CANSSI[5] <- paste0("DG\\textbf{", kableExtra::footnote_marker_number(5), "}",
+                                        " \\thinspace \\space \\space \\space \\space \\space  \\space \\$3")
+Contributions_1_Non_CANSSI[6] <- paste0("CGHR\\textbf{", kableExtra::footnote_marker_number(6), "}", 
+                                        " \\thinspace \\thinspace \\$10")
+Contributions_1_Non_CANSSI[7] <- paste0("INSPQ\\textbf{", kableExtra::footnote_marker_number(7), "}", 
+                                        " \\thinspace \\thinspace \\$10")
+
+Contributions_2_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
+                                         "INRS \\space \\space \\space \\space \\space \\$10",
+                                         "NSERC \\space \\space \\space \\$7",
+                                         "USRA \\space \\space \\space \\space \\space \\$9",
+                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR \\space \\space \\space \\$10",
+                                         "INSPQ \\space \\space \\space \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+Contributions_3_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
+                                         "INRS \\space \\space \\space \\space \\space \\$10",
+                                         "NSERC \\space \\space \\space \\$7",
+                                         "USRA \\space \\space \\space \\space \\space \\$9",
+                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
+                                         "CGHR \\space \\space \\space \\$10",
+                                         "INSPQ \\space \\space \\space \\$10",
+                                         " ",
+                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
+
+
+Budget_Table <- cbind( Expenses, Contributions_1_CANSSI, 
+                                 Contributions_1_Non_CANSSI, 
+                                 Contributions_2_CANSSI, 
+                                 Contributions_2_Non_CANSSI,
+                                 Contributions_3_CANSSI, 
+                                 Contributions_3_Non_CANSSI )
+colnames(Budget_Table) = c( "", "CANSSI", "Non-CANSII", 
+                                "CANSSI", "Non-CANSSI", 
+                                "CANSSI", "Non-CANSSI" )
+rownames(Budget_Table) = NULL 
+
+knitr::kable( Budget_Table, booktabs = TRUE, escape = FALSE,
+              format = "latex",  label = "Budget-Table" ) %>%
+kableExtra::row_spec(0, align = "l") %>%
+kableExtra::column_spec( c(1,3,5,7), border_right = TRUE) %>%
+kableExtra::column_spec( c(1,2), border_left = TRUE) %>%
+kableExtra::collapse_rows(columns = c(1,2,4,6)) %>%
+kableExtra::add_header_above( c(" " = 1, "Year 1" = 2, "Year 2" = 2, "Year 3" = 2) ) %>%
+kableExtra::add_header_above( c("Expenses" = 1, "Contributions (in 1,000's)" = 6) ) %>%
+kableExtra::footnote(number = c( "HC: Health Canada", "INRS: Institut national de la recherche scientifique", "NSERC: The Natural Sciences and Engineering Research Council of Canada", "USRA: NSERC Undergraduate Student Research Award", "DG: NSERC Discovery Grant", "CHGR: Centre for Global Health Research", "INSPQ: Institut national de santé publique du Québec (Quebec Public Health Institute)" ))
+```

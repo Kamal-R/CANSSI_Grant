@@ -236,7 +236,22 @@ The group will set up a Slack channel for messaging and a Github repository for 
 
 The lead investigators of this proposal have a track record of publishing research results in leading statistical and epidemiological journals, and aim to publish the results of this project in high-impact journals. The results and findings of this multiple pollutant inquiry will also be shared with Health Canada and the Institut National de Santé Publique du Québec.   Drs Shin and Campagna will use the methodologies developed in their ongoing research and programatic work, and facilitate the adoption of the methods more widely in their organizations.
 
-Members of the team will present regularly at international conferences, such as the International Environmetrics Society (TIES) Conference.  Invited sessions on the CRT's work will be proposed annually for the SSC conference.  By the end of the three year grant period, we will have an R package implementing bcGAIM with worked examples.  Material for a short course will be written and offered as one-day workshops.  Specific papers are listed in the Schedule of Events below.
+Members of the team will present regularly at international conferences, such as the International Environmetrics Society (TIES) Conference.  Invited sessions on the CRT's work will be proposed annually for the SSC conference.  By the end of the three year grant period, we will have an R package implementing bcGAIM with worked examples.  Material for a short course will be written and offered as one-day workshops.  Specific papers are listed below, and intended completion dates are listed in the following section.
+
+### Papers
+
+- bcGAIM 1: basic bcGAIM (MCMC, latent Gaussian, convenient priors) manuscript for applied statistics journal (i.e. _JRSSC_)
+- AQHI 1: Canadian air quality index paper based on basic bcGAIM for a health journal (i.e. _BMJ Open_)
+- bcGAIM 2: Monotone bcGAIM paper for computational statistics journal (i.e. _JCGS_)
+- Priors: Penalized Complexity priors for bcGAIM in a methods journal (i.e. _Bayesian Analysis_)
+- Algorithm: INLA-like algorithm methods paper for a statistical journal (i.e. _Statistics in Medicine_)
+- Covid: Epidemiological paper on short term pollution and COVID-19 for a health journal 
+- Software: Paper on bcGAIM R package submitted to a software journal (i.e. _Journal of Statistical Software_)
+- AQHI 2: Air quality index based on fully developed bcGAIM for a health journal
+- Final paper: Epidemiological paper on acute mortality submitted to high impact medical journal (i.e. _Lancet_)
+
+
+
 
 
 **Schedule of events** 
@@ -251,9 +266,9 @@ Members of the team will present regularly at international conferences, such as
 - Fall 2021
     - Beta version of basic bcGAIM R package 
 - Winter 2022
-    - Completion of first bcGAIM manuscript for applied stats journal (i.e. _JRSSC_)
+    - bcGAIM 1 paper completed
 - Spring 2022 
-    - First applied paper on AQHI submitted to Health Canada for approval
+    - AQHI 1 paper sent to Health Canada for approval
     - 1 day group meeting and invited session at SSC conference
 - Summer 2022
     - Latent Gaussian near-monotone smoothing incorporated into R package
@@ -262,124 +277,23 @@ Members of the team will present regularly at international conferences, such as
     - Non-Gaussian monotone smoothing incorporated into R package
     - INLA algorithm alpha version R package
 - Winter 2023
-    - Monotone bcGAIM methods paper completed (i.e. _JCGS_)
-    - PC Priors for bcGAIM paper submitted (i.e. _Bayesian Analysis_)
+    - bcGAIM paper 2 completed
+    - Priors paper completed
 - Spring 2023
-    - INLA-like algorithm methods paper submitted to statistical journal (i.e. _Statistics in Medicine_)
-    - Draft of epidemiological paper on short term pollution and COVID-19 submitted (i.e. _BMJ Open_)
+    - Algorithm paper completed
+    - Covid paper submitted
     - 1 day group meeting and invited session at SSC conference
 - Summer 2023
-    - Software paper on bcGAIM package submitted (i.e. _Journal of Statistical Software_)
+    - Software paper submitted
 - Fall 2023
-    - Second applied AQHI paper submitted to Health Canada for approval
+    - AQHI 2 paper sent to Health Canada for approval
 - Winter 2024
-    - Epidemiological paper on acute mortality submitted to high impact journal (i.e. _Lancet_)
+    - Final paper completed
     - Submit proposals for short courses to conferences (i.e. JSM, IBC)
-- March 2024
+- Spring 2024
     - End of project funding
-- May 2024
     - 1 day group meeting and invited session at SSC conference
 
-ANYTHING BELOW THAT'S IMPORTANT BUT NOT INCLUDED ABOVE?
-
-
-Task: Develop the bcGAIM 
-
-\begin{itemize}
-    \item 6-8 months: Implement prior(s) for shape-constrained inference for 1$^{\text{st}}$-order and 2$^{\text{nd}}$-order random walks. 
-    \item 8-12 months: Implement the bcGAIM in Stan and apply to the multi-pollutant problem. 
-    \item 12-16 months: Iterate development of priors until modeling results are satisfactory for the multi=pollutant model.
-    \item 16-20 months: Write a paper summarizing these modeling results and submit for publication. 
-    \item 16-20 months: Release an R package so that these models are readily available.
-    \item 20-24 months: Implement additional prior(s) for shape-constrained Bayesian inference.
-    \item 24-30 months: Extend to a hierarchical model. 
-    \item 30-36 months: Write a paper summarizing the results of the hierarhical extensions for the exact and approximate inference models, and submit for publication. 
-
-\end{itemize}
-
-Task: Approximate Inference Algorithm
-\begin{itemize}
-    \item 4-6 months: Implement Laplace approximations for $\pi( \eta | \theta, \alpha, Y )$ and $\pi( \theta | Y )$ in Stan. 
-    \item 4-8 months: Implement an approximate inference algorithm for $\pi( \alpha | \theta,Y )$ in Stan. 
-    \item 8-12 months: Implement both approximations outside of Stan. Compare estimation results to those achieved in Stan.
-    \item 12-16 months: Iterate development of approximation schemes outside of Stan.
-    \item 16-20 months: Write a paper summarizing these results and submit for publication. 
-    \item 20-24 months: Apply both approximations to the multi-pollutant model.
-    \item 20-24 months: Add the approximate Bayesian inference models to the R package. 
-    \item 24-30 months: Extend the approximation algorithm to hierarchical models. Compare to results obtained by Stan.
-    \item 30-36 months: Add hierarchical approximate inference model to the R package. 
-\end{itemize}
-
-
-Task: Multi-Pollutant Application
-
-Note: The Stan implementation of the bcGAIM and the approximate inference algorithms will be developed against the multi-pollutant model, so the tasks for this application are mostly listed above. We include it on its own to give a specific breakdown of the development of the mulit-pollutant model.
-
-\begin{itemize}
-    \item 8-12 months: Explore the performance of bcGAIM across regions and mortality outcomes.
-    \item 12-16 months: Iteratively refine the bcGAIM (including the shape-constraining priors).
-    \item 24-30 months: Extend the multi-pollutant model to a hierarchical model (exact and approximate versions).
-    \item 30-36 months: Write a paper summarizing these results and submit for publication. 
-    \item 30-36 months: Add hierarhical bcGAIM model to the R package.
-\end{itemize}
-
-
-Task: COVID-19 Application 
-\begin{itemize}
-    \item 12-14 months: Identify COVID-19 confounders and data sets that may be used to fit a COVID-19 bcGAIM model. 
-    \item 14-16 months: Fit the bcGAIM model to COVID-19 mortality data. 
-    \item 16-20 months: Write a paper summarizing these results and submit for publication. 
-\end{itemize}
-
-
-Task: Collaborative Applications
-\begin{itemize}
-    \item 12-36 months: Once the bcGAIM is implemented, work with collaborations on appropriate epidemological studies.
-\end{itemize}
-
-
-**Dissemination and Publication Activities**
-
-**THIS NEEDS TO BE UPDATED**
-
-Year 1 
-
-\begin{itemize}
-  \item Milestone: Implement the bcGAIM with shape-constrained priors that are applicable for the multi-pollutant problem. 
-  \item Milestone: Implement the INLA-like approximation to the target density of this model in Stan.
-\end{itemize}
-
-Year 2 
-
-\begin{itemize}
-    \item Milestone: 
-    \item Milestone: 
-    \item Submit paper: A multi-pollutant air quality index. 
-    \item Submit Paper: Approximate Bayesian inference for the bcGAIM model
-    \item Dissemination: Discuss shape-constrained Bayesian inference at 1-2 conferences.
-    \item Dissemination: Discuss approximate Bayesian inference at 1-2 conferences. 
-\end{itemize}
-
-Year 3 
-
-\begin{itemize}
-    \item Milestone: 
-    \item Submit Paper: Shape-constrained Bayesian inference with interpretable priors.
-    \item Submit paper: The effects of multiple pollutant mixtures on COVID-19 mortality.
-    \item Submit paper: A hierarchical extension to Approximate Bayesian inference
-    \item Dissemintation: Discuss the multi-pollutant air quality index at 1-2 conferences.
-    \item Dissemintation: Discuss hierarchical extensions to the multi-pollutant air quality index at 1-2 conferences.
-    \item Dissemintation: Discuss the COVID-19 inquiry into air pollution exposure at 1-2 conferences.
-\end{itemize}
-
-
-\clearpage
-
-**Major Collaborative Activities**
-
-**THIS NEEDS TO BE UPDATED**
-
-The different components of the bcGAIM project are naturally related. The bcGAIM is being developed in Stan in the first year, as is the first version of the approximate inference algorithm. Therefore, the bcGAIM model should be written to faciliate incorporating these approximations, and they should be developed knowing they will be implemented in Stan. In the second year, the two Stan models and the approximate inference algorithm will be extended to a hierarchical formulation. Although the hierarchical structure is at the city-level, nearby cities differ in their distance from each other. Ideally, a hierarchical model should account for how the composition of a mixture of pollutants varies by distance. The numerical difficulties and more complicated hierarchical structure should encourage strong collaboration at this stage of the project. The third year is devoted to applications -- applying the fully developed bcGAIM model to the multi-pollutant problem, COVID-19 data, and other epiodemiological applications that arise during the course of the project -- as well as writing papers and producing a useful R package. There is again natural collaboration between those writing and maintaining the R package. 
 
 
 
@@ -389,125 +303,47 @@ The different components of the bcGAIM project are naturally related. The bcGAIM
 
 The table below lists income and expenses for each of the three years of the project. This budget assumes that CANSSI funding over the 3 year period is \$200,000. 
 
-```{r CANSSI-Budget-Yearly-Breakdown, echo = FALSE}
-library(magrittr) 
-Expenses <- t( data.frame( "\\makecell[l]{Postdotor-\\\\al Fellow}", 
-                           "\\makecell[l]{Graduate \\\\ Students}",
-                           "\\makecell[l]{Graduate \\\\ Students}",
-                           "\\makecell[l]{Undergrad \\\\ Students}",
-                           "\\makecell[l]{Undergrad \\\\ Students}",
-                           "\\makecell[l]{Research \\\\ Assistant}",
-                           "\\makecell[l]{INSPQ \\\\ Staff Time}",
-                           "Travel",
-                           "\\textbf{Total}" ) )
 
-Contributions_1_Names_Non_CANSSI <- t( data.frame( "HC",
-                                        "INRS", 
-                                        "NSERC", 
-                                        "USRA",
-                                        "DG",
-                                        "CGHR",
-                                        "INSPQ",
-                                        " ",
-                                        "  ") )
+a
 
-Contributions_1_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
-                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
-                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
-                                         "\\textcolor{white}{1-1}",
-                                         "\\textcolor{white}{1-1}",
-                                         "\\textcolor{white}{1-2}",
-                                         "\\textcolor{white}{1-3}",
-                                         "\\makecell[c]{\\$7}",
-                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
-
-Contributions_2_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
-                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
-                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
-                                         "\\textcolor{white}{1-1}",
-                                         "\\textcolor{white}{1-1}",
-                                         "\\textcolor{white}{1-2}",
-                                         "\\textcolor{white}{1-3}",
-                                         "\\makecell[c]{\\$7}",
-                                         "\\makecell[c]{\\textbf{\\$66}}" ) )
-
-Contributions_3_CANSSI <- t( data.frame( "\\makecell[c]{\\$35}",
-                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
-                                         "\\makecell[c]{ \\textcolor{white}{0} \\$24}",
-                                         "\\textcolor{white}{1-1}",
-                                         "\\textcolor{white}{1-1}",
-                                         "\\textcolor{white}{1-2}",
-                                         "\\textcolor{white}{1-3}",
-                                         "\\makecell[c]{\\$9}",
-                                         "\\makecell[c]{\\textbf{\\$68}}" ) )
-
-Contributions_1_Non_CANSSI <- t( data.frame( "HC: \\space \\space \\space \\space \\space \\$20",
-                                         "INRS: \\space \\space \\$10",
-                                         "NSERC: \\$7",
-                                         "USRA:  \\space  \\space \\$9",
-                                         "DG:  \\space  \\space  \\space  \\space  \\space  \\space \\$3",
-                                         "CGHR: \\$10",
-                                         "INSPQ: \\$10",
-                                         " ",
-                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
-
-Contributions_1_Non_CANSSI[1] <- paste0("HC\\textbf{", kableExtra::footnote_marker_number(1), "}",
-                                        " \\space \\space \\space \\space \\space \\space \\$20")                               
-Contributions_1_Non_CANSSI[2] <- paste0("INRS\\textbf{", kableExtra::footnote_marker_number(2), "}",
-                                        " \\space \\space \\space \\$20")                                     
-Contributions_1_Non_CANSSI[3] <- paste0("NSERC\\textbf{", kableExtra::footnote_marker_number(3), "}", 
-                                        " \\space \\$7" )
-Contributions_1_Non_CANSSI[4] <- paste0("USRA\\textbf{", kableExtra::footnote_marker_number(4), "}", 
-                                        " \\thinspace \\thinspace \\space \\space \\$9" )
-Contributions_1_Non_CANSSI[5] <- paste0("DG\\textbf{", kableExtra::footnote_marker_number(5), "}",
-                                        " \\thinspace \\space \\space \\space \\space \\space  \\space \\$3")
-Contributions_1_Non_CANSSI[6] <- paste0("CGHR\\textbf{", kableExtra::footnote_marker_number(6), "}", 
-                                        " \\thinspace \\thinspace \\$10")
-Contributions_1_Non_CANSSI[7] <- paste0("INSPQ\\textbf{", kableExtra::footnote_marker_number(7), "}", 
-                                        " \\thinspace \\thinspace \\$10")
-
-Contributions_2_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
-                                         "INRS \\space \\space \\space \\space \\space \\$10",
-                                         "NSERC \\space \\space \\space \\$7",
-                                         "USRA \\space \\space \\space \\space \\space \\$9",
-                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
-                                         "CGHR \\space \\space \\space \\$10",
-                                         "INSPQ \\space \\space \\space \\$10",
-                                         " ",
-                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
-
-Contributions_3_Non_CANSSI <- t( data.frame( "HC \\space \\space \\space \\space \\space \\space \\space \\space \\$20",
-                                         "INRS \\space \\space \\space \\space \\space \\$10",
-                                         "NSERC \\space \\space \\space \\$7",
-                                         "USRA \\space \\space \\space \\space \\space \\$9",
-                                         "DG \\space \\space \\space \\space \\space  \\space  \\space  \\space  \\space \\$3",
-                                         "CGHR \\space \\space \\space \\$10",
-                                         "INSPQ \\space \\space \\space \\$10",
-                                         " ",
-                                         "\\makecell[l]{ \\textcolor{white}{0} \\space \\space \\space \\space \\space \\space \\space \\space \\space \\space \\textbf{\\$69}}" ) )
-
-
-Budget_Table <- cbind( Expenses, Contributions_1_CANSSI, 
-                                 Contributions_1_Non_CANSSI, 
-                                 Contributions_2_CANSSI, 
-                                 Contributions_2_Non_CANSSI,
-                                 Contributions_3_CANSSI, 
-                                 Contributions_3_Non_CANSSI )
-colnames(Budget_Table) = c( "", "CANSSI", "Non-CANSII", 
-                                "CANSSI", "Non-CANSSI", 
-                                "CANSSI", "Non-CANSSI" )
-rownames(Budget_Table) = NULL 
-
-knitr::kable( Budget_Table, booktabs = TRUE, escape = FALSE,
-              format = "latex",  label = "Budget-Table" ) %>%
-kableExtra::row_spec(0, align = "l") %>%
-kableExtra::column_spec( c(1,3,5,7), border_right = TRUE) %>%
-kableExtra::column_spec( c(1,2), border_left = TRUE) %>%
-kableExtra::collapse_rows(columns = c(1,2,4,6)) %>%
-kableExtra::add_header_above( c(" " = 1, "Year 1" = 2, "Year 2" = 2, "Year 3" = 2) ) %>%
-kableExtra::add_header_above( c("Expenses" = 1, "Contributions (in 1,000's)" = 6) ) %>%
-kableExtra::footnote(number = c( "HC: Health Canada", "INRS: Institut national de la recherche scientifique", "NSERC: The Natural Sciences and Engineering Research Council of Canada", "USRA: NSERC Undergraduate Student Research Award", "DG: NSERC Discovery Grant", "CHGR: Centre for Global Health Research", "INSPQ: Institut national de santé publique du Québec (Quebec Public Health Institute)" ))
-```
+\begin{tabular}{|>{}l|>{}l>{}l|l>{}l|l>{}l|}
+\toprule
+\multicolumn{1}{c}{Expenses} & \multicolumn{6}{c}{Contributions (in 1,000's)} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-7}
+\multicolumn{1}{c}{ } & \multicolumn{2}{c}{Year 1} & \multicolumn{2}{c}{Year 2} & \multicolumn{2}{c}{Year 3} \\
+\cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-5} \cmidrule(l{3pt}r{3pt}){6-7}
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{CANSSI} & \multicolumn{1}{l}{Non-CANSII} & \multicolumn{1}{l}{CANSSI} & \multicolumn{1}{l}{Non-CANSSI} & \multicolumn{1}{l}{CANSSI} & \multicolumn{1}{l}{Non-CANSSI}\\
+\midrule
+\makecell[l]{Postdotor-\\al Fellow} & \makecell[c]{\$35} & HC\textbf{<sup>1</sup>} \space \space \space \space \space \space \$20 & \makecell[c]{\$35} & HC \space \space \space \space \space \space \space \space \$20 & \makecell[c]{\$35} & HC \space \space \space \space \space \space \space \space \$20\\
+\cmidrule{1-7}
+ &  & INRS\textbf{<sup>2</sup>} \space \space \space \$20 &  & INRS \space \space \space \space \space \$10 &  & INRS \space \space \space \space \space \$10\\
+\cmidrule{3-3}
+\cmidrule{5-5}
+\cmidrule{7-7}
+\multirow{-2}{*}{\raggedright\arraybackslash \makecell[l]{Graduate \\ Students}} & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC\textbf{<sup>3</sup>} \space \$7 & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC \space \space \space \$7 & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC \space \space \space \$7\\
+\cmidrule{1-7}
+ &  & USRA\textbf{<sup>4</sup>} \thinspace \thinspace \space \space \$9 &  & USRA \space \space \space \space \space \$9 &  & USRA \space \space \space \space \space \$9\\
+\cmidrule{3-3}
+\cmidrule{5-5}
+\cmidrule{7-7}
+\multirow{-2}{*}{\raggedright\arraybackslash \makecell[l]{Undergrad \\ Students}} & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG\textbf{<sup>5</sup>} \thinspace \space \space \space \space \space  \space \$3 & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG \space \space \space \space \space  \space  \space  \space  \space \$3 & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG \space \space \space \space \space  \space  \space  \space  \space \$3\\
+\cmidrule{1-7}
+\makecell[l]{Research \\ Assistant} & \textcolor{white}{1-2} & CGHR\textbf{<sup>6</sup>} \thinspace \thinspace \$10 & \textcolor{white}{1-2} & CGHR \space \space \space \$10 & \textcolor{white}{1-2} & CGHR \space \space \space \$10\\
+\cmidrule{1-7}
+\makecell[l]{INSPQ \\ Staff Time} & \textcolor{white}{1-3} & INSPQ\textbf{<sup>7</sup>} \thinspace \thinspace \$10 & \textcolor{white}{1-3} & INSPQ \space \space \space \$10 & \textcolor{white}{1-3} & INSPQ \space \space \space \$10\\
+\cmidrule{1-7}
+Travel & \makecell[c]{\$7} &  & \makecell[c]{\$7} &  & \makecell[c]{\$9} & \\
+\cmidrule{1-7}
+\textbf{Total} & \makecell[c]{\textbf{\$66}} & \makecell[l]{ \textcolor{white}{0} \space \space \space \space \space \space \space \space \space \space \textbf{\$69}} & \makecell[c]{\textbf{\$66}} & \makecell[l]{ \textcolor{white}{0} \space \space \space \space \space \space \space \space \space \space \textbf{\$69}} & \makecell[c]{\textbf{\$68}} & \makecell[l]{ \textcolor{white}{0} \space \space \space \space \space \space \space \space \space \space \textbf{\$69}}\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{1} HC: Health Canada}\\
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{2} INRS: Institut national de la recherche scientifique}\\
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{3} NSERC: The Natural Sciences and Engineering Research Council of Canada}\\
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{4} USRA: NSERC Undergraduate Student Research Award}\\
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{5} DG: NSERC Discovery Grant}\\
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{6} CHGR: Centre for Global Health Research}\\
+\multicolumn{7}{l}{\rule{0pt}{1em}\textsuperscript{7} INSPQ: Institut national de santé publique du Québec (Quebec Public Health Institute)}\\
+\end{tabular}
 
 \underline{Annual Expenses}
 
