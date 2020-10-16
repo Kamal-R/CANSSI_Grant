@@ -10,7 +10,7 @@ PANDOCCROSSREF=--filter=pandoc-crossref
 
 all: CANSSI_Letter_of_Submission.pdf CANSSI_Application.pdf
 
-budget.md: budget.Rmd
+CANSSI_Budget.md: CANSSI_Budget.Rmd
 	R -e "base::library('base');knitr::knit('$<',encoding='UTF-8')" $(Rargs)
 
 %.tex: %.Rmd

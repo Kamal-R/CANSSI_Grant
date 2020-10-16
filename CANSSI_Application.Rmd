@@ -5,7 +5,7 @@ output:
     latex_engine: xelatex
 header-includes:  
     - \usepackage{geometry} 
-    - \usepackage{array, makecell}
+    - \usepackage{array,makecell,booktabs,multirow}
 biblatex: 1
 biblio-style: authoryear,backend=biber
 biblatexoptions: 
@@ -304,7 +304,6 @@ Members of the team will present regularly at international conferences, such as
 The table below lists income and expenses for each of the three years of the project. This budget assumes that CANSSI funding over the 3 year period is \$200,000. 
 
 
-a
 
 \begin{tabular}{|>{}l|>{}l>{}l|l>{}l|l>{}l|}
 \toprule
@@ -314,23 +313,23 @@ a
 \cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-5} \cmidrule(l{3pt}r{3pt}){6-7}
 \multicolumn{1}{l}{} & \multicolumn{1}{l}{CANSSI} & \multicolumn{1}{l}{Non-CANSII} & \multicolumn{1}{l}{CANSSI} & \multicolumn{1}{l}{Non-CANSSI} & \multicolumn{1}{l}{CANSSI} & \multicolumn{1}{l}{Non-CANSSI}\\
 \midrule
-\makecell[l]{Postdotor-\\al Fellow} & \makecell[c]{\$35} & HC\textbf{<sup>1</sup>} \space \space \space \space \space \space \$20 & \makecell[c]{\$35} & HC \space \space \space \space \space \space \space \space \$20 & \makecell[c]{\$35} & HC \space \space \space \space \space \space \space \space \$20\\
+\makecell[l]{Postdotor-\\al Fellow} & \makecell[c]{\$35} & HC\textbf{\textsuperscript{1}} \space \space \space \space \space \space \$20 & \makecell[c]{\$35} & HC \space \space \space \space \space \space \space \space \$20 & \makecell[c]{\$35} & HC \space \space \space \space \space \space \space \space \$20\\
 \cmidrule{1-7}
- &  & INRS\textbf{<sup>2</sup>} \space \space \space \$20 &  & INRS \space \space \space \space \space \$10 &  & INRS \space \space \space \space \space \$10\\
+ &  & INRS\textbf{\textsuperscript{2}} \space \space \space \$20 &  & INRS \space \space \space \space \space \$10 &  & INRS \space \space \space \space \space \$10\\
 \cmidrule{3-3}
 \cmidrule{5-5}
 \cmidrule{7-7}
-\multirow{-2}{*}{\raggedright\arraybackslash \makecell[l]{Graduate \\ Students}} & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC\textbf{<sup>3</sup>} \space \$7 & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC \space \space \space \$7 & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC \space \space \space \$7\\
+\multirow{-2}{*}{\raggedright\arraybackslash \makecell[l]{Graduate \\ Students}} & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC\textbf{\textsuperscript{3}} \space \$7 & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC \space \space \space \$7 & \multirow{-2}{*}{\raggedright\arraybackslash \makecell[c]{ \textcolor{white}{0} \$24}} & NSERC \space \space \space \$7\\
 \cmidrule{1-7}
- &  & USRA\textbf{<sup>4</sup>} \thinspace \thinspace \space \space \$9 &  & USRA \space \space \space \space \space \$9 &  & USRA \space \space \space \space \space \$9\\
+ &  & USRA\textbf{\textsuperscript{4}} \thinspace \thinspace \space \space \$9 &  & USRA \space \space \space \space \space \$9 &  & USRA \space \space \space \space \space \$9\\
 \cmidrule{3-3}
 \cmidrule{5-5}
 \cmidrule{7-7}
-\multirow{-2}{*}{\raggedright\arraybackslash \makecell[l]{Undergrad \\ Students}} & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG\textbf{<sup>5</sup>} \thinspace \space \space \space \space \space  \space \$3 & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG \space \space \space \space \space  \space  \space  \space  \space \$3 & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG \space \space \space \space \space  \space  \space  \space  \space \$3\\
+\multirow{-2}{*}{\raggedright\arraybackslash \makecell[l]{Undergrad \\ Students}} & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG\textbf{\textsuperscript{5}} \thinspace \space \space \space \space \space  \space \$3 & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG \space \space \space \space \space  \space  \space  \space  \space \$3 & \multirow{-2}{*}{\raggedright\arraybackslash \textcolor{white}{1-1}} & DG \space \space \space \space \space  \space  \space  \space  \space \$3\\
 \cmidrule{1-7}
-\makecell[l]{Research \\ Assistant} & \textcolor{white}{1-2} & CGHR\textbf{<sup>6</sup>} \thinspace \thinspace \$10 & \textcolor{white}{1-2} & CGHR \space \space \space \$10 & \textcolor{white}{1-2} & CGHR \space \space \space \$10\\
+\makecell[l]{Research \\ Assistant} & \textcolor{white}{1-2} & CGHR\textbf{\textsuperscript{6}} \thinspace \thinspace \$10 & \textcolor{white}{1-2} & CGHR \space \space \space \$10 & \textcolor{white}{1-2} & CGHR \space \space \space \$10\\
 \cmidrule{1-7}
-\makecell[l]{INSPQ \\ Staff Time} & \textcolor{white}{1-3} & INSPQ\textbf{<sup>7</sup>} \thinspace \thinspace \$10 & \textcolor{white}{1-3} & INSPQ \space \space \space \$10 & \textcolor{white}{1-3} & INSPQ \space \space \space \$10\\
+\makecell[l]{INSPQ \\ Staff Time} & \textcolor{white}{1-3} & INSPQ\textbf{\textsuperscript{7}} \thinspace \thinspace \$10 & \textcolor{white}{1-3} & INSPQ \space \space \space \$10 & \textcolor{white}{1-3} & INSPQ \space \space \space \$10\\
 \cmidrule{1-7}
 Travel & \makecell[c]{\$7} &  & \makecell[c]{\$7} &  & \makecell[c]{\$9} & \\
 \cmidrule{1-7}
