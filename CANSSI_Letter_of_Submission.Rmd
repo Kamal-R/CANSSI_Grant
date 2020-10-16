@@ -7,6 +7,7 @@ geometry: margin=1in
 size: 12pt
 ---
 
+
 # Summary of changes
 
 The Aims have been revised to emphasize the methodological aspects of the research, with the new aims being as follows:
@@ -70,7 +71,7 @@ As stated in the previous comment, COVID-19 mortality will be of interest due to
   \begin{enumerate}
   \item \textit{Provide explicit information on the kinds of constraints you will place on the prior distributions. Provide more extensive references to the literature on shape constrained models.}
       
-  We now elaborate on the shape constrained non-parameteric effects, with specific reference to  @ramsay1998,   @golchi2015monotone, and @burkner2020modelling.
+  We now elaborate on the shape constrained non-parameteric effects, with specific reference to  Ramsay (1998),   Golchi et al. (2015) , and  Bürkner and Charpentier (2020).
 
       
   \item \textit{Describe the challenges of introducing Bayesian approaches.}
